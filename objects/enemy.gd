@@ -25,7 +25,7 @@ func _ready():
 
 
 func _process(_delta):
-
+	self.look_at(player.position + Vector3(0, 0.5, 0), Vector3.UP, true)
 	velocity = Vector3.ZERO
 	nav.set_target_position(player.global_position)
 	velocity = (next_nav_point - global_position).normalized() * speed

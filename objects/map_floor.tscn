@@ -12,6 +12,8 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(2, 3, 0), PackedInt32Arr
 [node name="map_floor" instance=ExtResource("1_s6je5")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GEO_Floor" index="0"]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GEO_Floor/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_4vbc4")

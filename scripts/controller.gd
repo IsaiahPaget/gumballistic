@@ -6,7 +6,9 @@ class_name Controller
 @export var heavy_scn: PackedScene
 @export var fairy_scn: PackedScene
 @export var trick_or_treat: Control
-@onready var player = get_tree().get_first_node_in_group("Player") as Player
+
+@onready var player := get_tree().get_first_node_in_group("Player") as Player
+@onready var enemy_scenes := [spook_scn, speedy_scn, fairy_scn]
 
 var _enemies := []
 @onready var _banes := [
@@ -38,7 +40,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if _enemies_in_game < max_enemies:
-		var enemy := spook_scn.instantiate() as Enemy
+		var rand_index = randi() % enemy_scenes.size()
+		var scn = enemy_scenes[rand_index]
+		var enemy := scn.instantiate() as Enemy
 		add_child(enemy)
 		enemy.hide()
 		_enemies.push_front(enemy)
