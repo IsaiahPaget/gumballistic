@@ -1,22 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2g78tpqbyf5g"]
+[gd_scene load_steps=10 format=3 uid="uid://dewod72veetr"]
 
-[ext_resource type="Script" path="res://objects/enemy.gd" id="1_jg24b"]
-[ext_resource type="Texture2D" uid="uid://c3ilc0jmmrnw7" path="res://sprites/spooks/Spook Antic.png" id="2_wsaey"]
-[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="3_iblw5"]
-[ext_resource type="Texture2D" uid="uid://b4yt5v2vogo1n" path="res://sprites/spooks/Spook Attack.png" id="3_swnr4"]
-[ext_resource type="Texture2D" uid="uid://cq4ipie2bhwr0" path="res://sprites/spooks/Spook Hurt.png" id="4_sbrr4"]
-[ext_resource type="Texture2D" uid="uid://dxahqo3bi84ao" path="res://sprites/spooks/Spook Walk 1.png" id="5_w2f40"]
-[ext_resource type="Texture2D" uid="uid://v5uoiydmioh" path="res://sprites/spooks/Spook Walk 2.png" id="6_ka03x"]
-[ext_resource type="Texture2D" uid="uid://q4s1okgtjkeu" path="res://sprites/spooks/Spook Walk 3.png" id="7_g2jo2"]
+[ext_resource type="Script" path="res://objects/enemy.gd" id="1_jfsns"]
+[ext_resource type="Texture2D" uid="uid://cclqivh715mk3" path="res://sprites/super/Super Antic.png" id="2_tj2fl"]
+[ext_resource type="Texture2D" uid="uid://cqx600kf5om0n" path="res://sprites/super/Super Attack.png" id="3_yy1yp"]
+[ext_resource type="Texture2D" uid="uid://bs8hcrhpernxk" path="res://sprites/super/Super Hurt.png" id="4_wcxg7"]
+[ext_resource type="Texture2D" uid="uid://vbfxtm351sfx" path="res://sprites/super/Super Run 1.png" id="5_mvwin"]
+[ext_resource type="Texture2D" uid="uid://bbvve8wjjtssv" path="res://sprites/super/Super Run 2.png" id="6_ex5gd"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="8_g2eyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8fl5f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wsaey")
+"texture": ExtResource("2_tj2fl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_swnr4")
+"texture": ExtResource("3_yy1yp")
 }],
 "loop": true,
 "name": &"attack",
@@ -24,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_sbrr4")
+"texture": ExtResource("4_wcxg7")
 }],
 "loop": true,
 "name": &"hurt",
@@ -32,16 +31,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_w2f40")
+"texture": ExtResource("5_mvwin")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ka03x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_g2jo2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ka03x")
+"texture": ExtResource("6_ex5gd")
 }],
 "loop": true,
 "name": &"walk",
@@ -55,7 +48,7 @@ radius = 0.75
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591225, 0)
 collision_layer = 4
 collision_mask = 3
-script = ExtResource("1_jg24b")
+script = ExtResource("1_jfsns")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
@@ -68,18 +61,18 @@ transform = Transform3D(0.778187, 0, 0, 0, 0.778187, 0, 0, 0, 0.778187, 0, -0.20
 shape = SubResource("SphereShape3D_iix87")
 
 [node name="RayCast" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, 0.75)
+target_position = Vector3(0, 0, 0.5)
 
 [node name="MuzzleA" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.45, 0.3, 0.4)
 visible = false
-sprite_frames = ExtResource("3_iblw5")
+sprite_frames = ExtResource("8_g2eyp")
 frame = 2
 
 [node name="MuzzleB" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.45, 0.3, 0.4)
 visible = false
-sprite_frames = ExtResource("3_iblw5")
+sprite_frames = ExtResource("8_g2eyp")
 frame = 2
 
 [node name="Timer" type="Timer" parent="."]

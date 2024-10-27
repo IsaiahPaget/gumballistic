@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=14 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" path="res://scripts/controller.gd" id="7_ucerh"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/spook.tscn" id="8_7ty2f"]
 [ext_resource type="PackedScene" uid="uid://dgbo40teqwo7k" path="res://objects/map_walls.tscn" id="8_meny0"]
+[ext_resource type="PackedScene" uid="uid://dewod72veetr" path="res://objects/super.tscn" id="12_jsidg"]
+[ext_resource type="PackedScene" uid="uid://dgmg2c8etvswu" path="res://objects/sprite.tscn" id="13_3cxcj"]
 
 [node name="Main" type="Node3D"]
 
@@ -143,6 +145,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 [node name="Controller" type="Node" parent="." node_paths=PackedStringArray("trick_or_treat") groups=["Controller"]]
 script = ExtResource("7_ucerh")
 spook_scn = ExtResource("8_7ty2f")
+speedy_scn = ExtResource("12_jsidg")
+fairy_scn = ExtResource("13_3cxcj")
 trick_or_treat = NodePath("../HUD/Trickortreat")
 
 [connection signal="accuracy_updated" from="Player" to="HUD" method="_on_player_accuracy_updated"]
