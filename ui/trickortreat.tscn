@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://d37bnswqshwmj"]
+
+[ext_resource type="Script" path="res://ui/trickortreat.gd" id="1_o0o6c"]
+
+[node name="Trickortreat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o0o6c")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -145.0
+offset_top = 86.0
+offset_right = 183.0
+offset_bottom = 109.0
+grow_horizontal = 2
+text = "You may need to click multiple times, if you loose your mouse press escape [esc] sorry lol"
+
+[node name="BoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -223.0
+offset_right = 41.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.88, 1.88)
+
+[node name="HealthButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Health"
+
+[node name="DamageButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Damage"
+
+[node name="SpeedButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Speed"
+
+[node name="FirerateButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Fire rate"
+
+[node name="AccuracyButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Accuracy"
+
+[node name="PoiseButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Poise
+"
+
+[node name="ShotCountButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Multi shot"
+
+[connection signal="pressed" from="BoxContainer/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="BoxContainer/DamageButton" to="." method="_on_damage_button_pressed"]
+[connection signal="pressed" from="BoxContainer/SpeedButton" to="." method="_on_speed_button_pressed"]
+[connection signal="pressed" from="BoxContainer/FirerateButton" to="." method="_on_firerate_button_pressed"]
+[connection signal="pressed" from="BoxContainer/AccuracyButton" to="." method="_on_accuracy_button_pressed"]
+[connection signal="pressed" from="BoxContainer/PoiseButton" to="." method="_on_poise_button_pressed"]
+[connection signal="pressed" from="BoxContainer/ShotCountButton" to="." method="_on_shot_count_button_pressed"]

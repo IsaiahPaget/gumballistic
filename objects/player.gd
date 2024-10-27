@@ -20,7 +20,14 @@ var rotation_target: Vector3
 
 var input_mouse: Vector2
 
-var health:int = 100
+@export var max_health:int = 100
+@export var health_upgrade_rate := 10
+@export var speed_upgrade_rate := 1
+@export var damage_upgrade_rate := 10
+@export var firerate_upgrade_rate := 0.1
+@export var poise_upgrade_rate := 1
+@export var accuracy_upgrade_rate := 1
+
 var gravity := 0.0
 
 var previously_floored := false
@@ -33,7 +40,14 @@ var container_offset = Vector3(1.2, -1.1, -2.75)
 var tween:Tween
 
 signal health_updated
+signal damage_updated
+signal speed_updated
+signal poise_updated
+signal accuracy_updated
+signal shotcount_updated
+signal firerate_updated
 
+@onready var health = max_health
 @onready var camera = $Head/Camera
 @onready var raycast = $Head/Camera/RayCast
 @onready var muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/Muzzle
@@ -51,6 +65,16 @@ func _ready():
 	
 	weapon = weapons[weapon_index] # Weapon must never be nil
 	initiate_change_weapon(weapon_index)
+	update_ui_stats()
+
+func update_ui_stats() -> void:
+	health_updated.emit(health)
+	damage_updated.emit(weapon.damage)
+	speed_updated.emit(movement_speed)
+	poise_updated.emit(weapon.knockback)
+	accuracy_updated.emit(weapon.spread)
+	shotcount_updated.emit(weapon.shot_count)
+	firerate_updated.emit(weapon.cooldown)
 
 func _physics_process(delta):
 	
@@ -174,7 +198,64 @@ func handle_gravity(delta):
 		gravity = 0
 
 # Jumping
+func upgrade_health() -> void:
+	max_health += health_upgrade_rate
+	health = max_health
+	health_updated.emit(health) # Update health on HUD
 
+func upgrade_speed() -> void:
+	movement_speed += speed_upgrade_rate
+
+func upgrade_damage() -> void:
+	for weapon_it in weapons:
+		weapon_it.damage += damage_upgrade_rate
+
+func upgrade_firerate() -> void:
+	for weapon_it in weapons:
+		if not weapon_it.cooldown < 0.1:
+			weapon_it.cooldown -= firerate_upgrade_rate
+func upgrade_accuracy() -> void:
+	for weapon_it in weapons:
+		weapon_it.spread -= accuracy_upgrade_rate
+
+func upgrade_poise() -> void:
+	for weapon_it in weapons:
+		weapon_it.knockback -= poise_upgrade_rate
+
+func upgrade_shot_count() -> void:
+	for weapon_it in weapons:
+		weapon_it.shot_count += 1
+
+func degrade_health() -> void:
+	max_health -= health_upgrade_rate
+	health = max_health
+	health_updated.emit(health) # Update health on HUD
+
+func degrade_speed() -> void:
+	movement_speed -= speed_upgrade_rate
+
+func degrade_damage() -> void:
+	for weapon_it in weapons:
+		weapon_it.damage -= damage_upgrade_rate
+
+func degrade_firerate() -> void:
+	for weapon_it in weapons:
+		if not weapon_it.cooldown < 0.1:
+			weapon_it.cooldown += firerate_upgrade_rate
+func degrade_accuracy() -> void:
+	for weapon_it in weapons:
+		weapon_it.spread += accuracy_upgrade_rate
+
+func degrade_poise() -> void:
+	for weapon_it in weapons:
+		weapon_it.knockback += poise_upgrade_rate
+
+func degrade_shot_count() -> void:
+	for weapon_it in weapons:
+		if not weapon_it.shot_count <= 1:
+			weapon_it.shot_count -= 1
+		else:
+			weapon_it.shot_count = 1
 func action_jump():
 	
 	gravity = -jump_strength
