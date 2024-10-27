@@ -270,22 +270,33 @@ func change_weapon():
 		container.remove_child(n)
 	
 	# Step 2. Place new weapon model in container
-	
+	var arm_model = weapon.arm_model.instantiate()
 	var weapon_model = weapon.model.instantiate()
 	container.add_child(weapon_model)
+<<<<<<< Updated upstream
 	var arm_model = weapon.arm_model.instantiate()
+=======
+>>>>>>> Stashed changes
 	container.add_child(arm_model)
 	
 	weapon_model.position = weapon.position
 	weapon_model.rotation_degrees = weapon.rotation
 	
 	arm_model.position = weapon.arm_position
+<<<<<<< Updated upstream
 	weapon_model.rotation_degrees = weapon.arm_rotation
+=======
+	arm_model.rotation_degrees = weapon.arm_rotation
+	
+>>>>>>> Stashed changes
 	# Step 3. Set model to only render on layer 2 (the weapon camera)
 	
 	for child in weapon_model.find_children("*", "MeshInstance3D"):
 		child.layers = 2
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 	for child in arm_model.find_children("*", "MeshInstance3D"):
 		child.layers = 2	
 	# Set weapon data

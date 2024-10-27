@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://c56y8pqoyk15f"]
 
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="1_2onsr"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://btpcm0q30rcog" path="res://gumball_rig_base.tscn" id="1_t0bhs"]
+=======
+[ext_resource type="PackedScene" uid="uid://b411hfkru5vs7" path="res://objects/blaster.tscn" id="1_8e25g"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
 [ext_resource type="PackedScene" uid="uid://bnds7nx24fqe3" path="res://objects/Arm_Test w Anim.fbx" id="2_rji7w"]
 
@@ -11,7 +15,11 @@ model = ExtResource("2_rji7w")
 position = Vector3(0, 0, 0)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
+<<<<<<< Updated upstream
 arm_model = ExtResource("1_t0bhs")
+=======
+arm_model = ExtResource("1_8e25g")
+>>>>>>> Stashed changes
 arm_position = Vector3(0, 0, 0)
 arm_rotation = Vector3(0, 0, 0)
 cooldown = 0.25
