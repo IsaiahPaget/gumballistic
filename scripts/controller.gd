@@ -34,7 +34,7 @@ var _is_looking_at_menu := false
 signal trick_or_treat_selection_made
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Audio.play("sounds/sfx_music.mp3")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

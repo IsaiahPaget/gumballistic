@@ -8,6 +8,7 @@ var bus = "master"
 var available = []  # The available players.
 var queue = []  # The queue of sounds to play.
 
+
 func _ready():
 	for i in num_players:
 		var p = AudioStreamPlayer.new()
