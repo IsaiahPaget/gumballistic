@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1tu2hu1u567g"]
+
+[ext_resource type="PackedScene" uid="uid://hvxmchtalws" path="res://objects/map_floor.tscn" id="1_skqny"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_o71a4"]
+vertices = PackedVector3Array(4.22847, 0.5, 5.61546, 4.47847, 0.5, 7.61546, 8.97847, 0.5, 7.61546, 8.97847, 0.5, -5.63454, -7.52153, 0.5, -5.63454, -7.52153, 0.5, 5.61546)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3)]
+
+[node name="Floor" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(52.2371, 0, 0, 0, 1.11752, 0, 0, 0, 48.0379, 0, 0.408115, 0)
+navigation_mesh = SubResource("NavigationMesh_o71a4")
+
+[node name="map_floor" parent="NavigationRegion3D" instance=ExtResource("1_skqny")]

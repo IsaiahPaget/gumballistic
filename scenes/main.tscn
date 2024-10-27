@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=12 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
@@ -6,9 +6,10 @@
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="3_w27de"]
 [ext_resource type="PackedScene" uid="uid://cgps3pg1uemsn" path="res://objects/enemy_spawner.tscn" id="5_3sj08"]
 [ext_resource type="PackedScene" uid="uid://d37bnswqshwmj" path="res://ui/trickortreat.tscn" id="5_i3p2k"]
-[ext_resource type="PackedScene" uid="uid://c1tu2hu1u567g" path="res://objects/platform-large.tscn" id="6_cg804"]
+[ext_resource type="PackedScene" uid="uid://hvxmchtalws" path="res://objects/map_floor.tscn" id="7_jmpvu"]
 [ext_resource type="Script" path="res://scripts/controller.gd" id="7_ucerh"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/spook.tscn" id="8_7ty2f"]
+[ext_resource type="PackedScene" uid="uid://dgbo40teqwo7k" path="res://objects/map_walls.tscn" id="8_meny0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fpmwk"]
 font = ExtResource("3_w27de")
@@ -22,6 +23,7 @@ outline_color = Color(0, 0, 0, 0.470588)
 environment = ExtResource("1_q8fpv")
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") groups=["Player"] instance=ExtResource("2_elriq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.932929, 1.17868)
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
@@ -128,21 +130,24 @@ controller = NodePath("../../Controller")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemySpawner" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8954, 0.370199, -44.0069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.19455, -0.666646, -5.78652)
 
 [node name="EnemySpawner2" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.9128, 3.55927, 44.6729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31487, -0.636871, 7.78804)
 
 [node name="EnemySpawner3" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2791, 0.370182, -23.6468)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8911, -0.665838, -5.0009)
 
 [node name="EnemySpawner4" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5921, 0.370182, 40.7603)
+transform = Transform3D(0.999993, 0, 0.00378736, 0, 1, 0, -0.00378736, 0, 0.999993, -1.9291, -1.3526, 5.04599)
 
 [node name="Level" type="Node" parent="."]
 
-[node name="Platform-large" parent="Level" instance=ExtResource("6_cg804")]
-transform = Transform3D(0.503964, 0, 0, 0, 1, 0, 0, 0, 0.502834, -1, -1, -3)
+[node name="map_floor" parent="Level" instance=ExtResource("7_jmpvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="map_walls" parent="Level" instance=ExtResource("8_meny0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Decoration" type="Node" parent="."]
 

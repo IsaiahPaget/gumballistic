@@ -45,13 +45,10 @@ func damage(amount):
 	
 	if float(self.health) / float(max_health) * 100 < 25:	
 		self.animation.modulate = Color("Red"); #yellow
-		print_debug("Red")	
 	else:if float(self.health) / float(max_health) * 100 < 50:		
 		self.animation.modulate = Color("Orange");
-		print_debug("orange")
 	else:if float(self.health) / float(max_health) * 100 < 75:		
 		self.animation.modulate = Color("Yellow"); #yellow	
-		print_debug("Yellow")
 		
 		
 	if health <= 0 and !destroyed:
