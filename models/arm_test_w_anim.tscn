@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn4ptv81ih2ne"]
-
-[ext_resource type="PackedScene" uid="uid://bnds7nx24fqe3" path="res://objects/Arm_Test w Anim.fbx" id="1_eciuq"]
-
-[node name="Arm_Test w Anim" instance=ExtResource("1_eciuq")]
-transform = Transform3D(2.25697, 1.87671, -0.619718, 1.24828, -0.624292, 2.65557, 1.53228, -2.25571, -1.25055, 0, 0.714086, 0)
