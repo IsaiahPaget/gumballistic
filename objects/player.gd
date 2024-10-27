@@ -295,8 +295,8 @@ func action_shoot():
 		
 		Audio.play(weapon.sound_shoot)
 		
-		container.position.z += 0.25 # Knockback of weapon visual
-		camera.rotation.x += 0.025 # Knockback of camera
+		container.position.z += 0.1 # Knockback of weapon visual
+		camera.rotation.x += 0.015 # Knockback of camera
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
 		
 		# Set muzzle flash position, play animation
