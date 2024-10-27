@@ -7,11 +7,6 @@ class_name Weapon
 @export var rotation: Vector3  # On-screen rotation
 @export var muzzle_position: Vector3  # On-screen position of muzzle flash
 
-@export_subgroup("Arm Model")
-@export var arm_model: PackedScene  # Model of the weapon
-@export var arm_position: Vector3  # On-screen position
-@export var arm_rotation: Vector3  # On-screen rotation
-
 @export_subgroup("Properties")
 @export_range(0.1, 1) var cooldown: float = 0.1  # Firerate
 @export_range(1, 20) var max_distance: int = 10  # Fire distance
