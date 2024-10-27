@@ -273,15 +273,21 @@ func change_weapon():
 	
 	var weapon_model = weapon.model.instantiate()
 	container.add_child(weapon_model)
+	var arm_model = weapon.arm_model.instantiate()
+	container.add_child(arm_model)
 	
 	weapon_model.position = weapon.position
 	weapon_model.rotation_degrees = weapon.rotation
 	
+	arm_model.position = weapon.arm_position
+	weapon_model.rotation_degrees = weapon.arm_rotation
 	# Step 3. Set model to only render on layer 2 (the weapon camera)
 	
 	for child in weapon_model.find_children("*", "MeshInstance3D"):
 		child.layers = 2
-		
+	
+	for child in arm_model.find_children("*", "MeshInstance3D"):
+		child.layers = 2	
 	# Set weapon data
 	
 	raycast.target_position = Vector3(0, 0, -1) * weapon.max_distance
