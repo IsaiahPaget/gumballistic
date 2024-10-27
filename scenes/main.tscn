@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bu6ilhkueit0h" path="res://objects/map_garage_assets.tscn" id="14_pfs28"]
 [ext_resource type="PackedScene" uid="uid://cn1xr3afpbs5i" path="res://objects/map_bedroom_assets.tscn" id="15_ibwjo"]
 [ext_resource type="PackedScene" uid="uid://dxi4ck285djnr" path="res://objects/map_bathroom_assets.tscn" id="16_jnadu"]
-[ext_resource type="PackedScene" uid="uid://vj4t47878e70" path="res://objects/door.tscn" id="18_sgxjl"]
+[ext_resource type="PackedScene" uid="uid://bnn53jukmfpop" path="res://objects/door.tscn" id="18_sgxjl"]
 
 [node name="Main" type="Node3D"]
 
