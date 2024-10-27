@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://c56y8pqoyk15f"]
 
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="1_2onsr"]
-[ext_resource type="PackedScene" uid="uid://btpcm0q30rcog" path="res://gumball_rig_base.tscn" id="1_t0bhs"]
+[ext_resource type="PackedScene" path="res://gumball_rig_base.tscn" id="1_t0bhs"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
 [ext_resource type="PackedScene" uid="uid://bnds7nx24fqe3" path="res://objects/Arm_Test w Anim.fbx" id="2_rji7w"]
 

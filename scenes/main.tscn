@@ -130,16 +130,16 @@ controller = NodePath("../../Controller")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemySpawner" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.19455, -0.666646, -5.78652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.195, -1, -5.787)
 
 [node name="EnemySpawner2" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31487, -0.636871, 7.78804)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.315, -1, 7.788)
 
 [node name="EnemySpawner3" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8911, -0.665838, -5.0009)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8911, -1, -5.0009)
 
 [node name="EnemySpawner4" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(0.999993, 0, 0.00378736, 0, 1, 0, -0.00378736, 0, 0.999993, -1.9291, -1.3526, 5.04599)
+transform = Transform3D(0.999993, 0, 0.00378736, 0, 1, 0, -0.00378736, 0, 0.999993, -1.9291, -1, 5.04599)
 
 [node name="Level" type="Node" parent="."]
 

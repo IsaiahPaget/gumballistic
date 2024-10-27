@@ -85,6 +85,7 @@ wait_time = 0.25
 autostart = true
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = -0.5
 avoidance_enabled = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
