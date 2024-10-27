@@ -7,10 +7,10 @@
 [ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="4_rgbis"]
 [ext_resource type="PackedScene" uid="uid://cgps3pg1uemsn" path="res://objects/enemy_spawner.tscn" id="5_3sj08"]
 [ext_resource type="PackedScene" uid="uid://d37bnswqshwmj" path="res://ui/trickortreat.tscn" id="5_i3p2k"]
-[ext_resource type="PackedScene" path="res://objects/map_floor.tscn" id="7_jmpvu"]
+[ext_resource type="PackedScene" uid="uid://hvxmchtalws" path="res://objects/map_floor.tscn" id="7_jmpvu"]
 [ext_resource type="Script" path="res://scripts/controller.gd" id="7_ucerh"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/spook.tscn" id="8_7ty2f"]
-[ext_resource type="PackedScene" path="res://objects/map_walls.tscn" id="8_meny0"]
+[ext_resource type="PackedScene" uid="uid://dgbo40teqwo7k" path="res://objects/map_walls.tscn" id="8_meny0"]
 
 [node name="Main" type="Node3D"]
 

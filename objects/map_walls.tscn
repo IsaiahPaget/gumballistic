@@ -8,6 +8,8 @@ data = PackedVector3Array(-651.983, 142.064, -16.8504, -797.56, 142.064, -16.850
 [node name="map_walls" instance=ExtResource("1_dvgjq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House_Layout/GEO_Walls" index="0"]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House_Layout/GEO_Walls/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_7n60s")
