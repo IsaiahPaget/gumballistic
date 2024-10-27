@@ -172,17 +172,17 @@ func handle_controls(_delta):
 	
 	# Jumping
 	
-	if Input.is_action_just_pressed("jump"):
-		
-		if jump_single or jump_double:
-			Audio.play("sounds/jump_a.ogg, sounds/jump_b.ogg, sounds/jump_c.ogg")
-		
-		if jump_double:
-			
-			gravity = -jump_strength
-			jump_double = false
-			
-		if(jump_single): action_jump()
+	#if Input.is_action_just_pressed("jump"):
+		#
+		#if jump_single or jump_double:
+			#Audio.play("sounds/jump_a.ogg, sounds/jump_b.ogg, sounds/jump_c.ogg")
+		#
+		#if jump_double:
+			#
+			#gravity = -jump_strength
+			#jump_double = false
+			#
+		#if(jump_single): action_jump()
 		
 	# Weapon switching
 	
@@ -404,4 +404,5 @@ func damage(amount):
 	health_updated.emit(health) # Update health on HUD
 	
 	if health < 0:
+		Audio.play("sounds/sfx_player_death.WAV")
 		get_tree().reload_current_scene() # Reset when out of health

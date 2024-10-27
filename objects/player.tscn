@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="2_b0fo8"]
 [ext_resource type="Resource" uid="uid://b3c1yno0yfhow" path="res://weapons/blaster.tres" id="3_kr4p8"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="4_m6ukc"]
-[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_ics1s"]
+[ext_resource type="AudioStream" uid="uid://d03rbjwbmf812" path="res://sounds/wood/1.ogg" id="7_i30sb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -73,7 +73,7 @@ modulate = Color(1, 1, 1, 0.705882)
 normal_fade = 0.5
 
 [node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_ics1s")
+stream = ExtResource("7_i30sb")
 volume_db = -5.0
 autoplay = true
 
