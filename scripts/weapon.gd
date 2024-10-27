@@ -12,10 +12,6 @@ class_name Weapon
 @export var arm_position: Vector3  # On-screen position
 @export var arm_rotation: Vector3  # On-screen rotation
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 @export_subgroup("Properties")
 @export_range(0.1, 1) var cooldown: float = 0.1  # Firerate
 @export_range(1, 20) var max_distance: int = 10  # Fire distance
