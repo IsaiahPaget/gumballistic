@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://b3c1yno0yfhow"]
 
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="1_2onsr"]
-[ext_resource type="PackedScene" uid="uid://cwb3vi4qlp5p3" path="res://anim_gumball_fire.fbx" id="1_oqn0c"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
+[ext_resource type="PackedScene" uid="uid://d035h4lnk8dxi" path="res://anim_gumball_fire.tscn" id="2_o63mu"]
 
 [resource]
 script = ExtResource("2_107w7")
-model = ExtResource("1_oqn0c")
+model = ExtResource("2_o63mu")
 position = Vector3(-1.2, 1.1, 2.5)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
