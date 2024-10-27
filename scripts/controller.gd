@@ -6,7 +6,8 @@ class_name Controller
 @export var heavy_scn: PackedScene
 @export var fairy_scn: PackedScene
 @export var trick_or_treat: Control
-@onready var player := get_tree().get_first_node_in_group("Player")
+
+@onready var player := get_tree().get_first_node_in_group("Player") as Player
 @onready var enemy_scenes := [spook_scn, speedy_scn, fairy_scn]
 
 var _enemies := []
@@ -18,6 +19,10 @@ var _enemies := []
 	player.degrade_damage,
 	player.degrade_shot_count,
 	player.degrade_accuracy,
+]
+
+@onready var _bane_text := [
+	"Health--",
 ]
 var level = 1
 var _kills = 0
@@ -45,6 +50,7 @@ func _process(_delta: float) -> void:
 
 	if _kills >= max_enemies and not _is_looking_at_menu:
 		_is_looking_at_menu = true
+		player.in_menu = true
 		level += 1
 		Engine.time_scale = 0
 		trick_or_treat.show()
@@ -85,4 +91,5 @@ func trick_or_treat_select(selection: String) -> void:
 	_banes[rand_index].call()
 	trick_or_treat_selection_made.emit()
 	_is_looking_at_menu = false
+	player.in_menu = false
 	player.update_ui_stats()

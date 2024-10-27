@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 @export_subgroup("Properties")
 @export var movement_speed = 5
 @export var jump_strength = 8
@@ -54,6 +54,8 @@ signal firerate_updated
 @onready var container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/Container
 @onready var sound_footsteps = $SoundFootsteps
 @onready var blaster_cooldown = $Cooldown
+
+@onready var in_menu := false
 
 @export var crosshair:TextureRect
 
@@ -141,7 +143,7 @@ func handle_controls(_delta):
 	
 	# Mouse capture
 	
-	if Input.is_action_just_pressed("mouse_capture"):
+	if Input.is_action_just_pressed("mouse_capture") and not in_menu:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		mouse_captured = true
 	
@@ -295,8 +297,8 @@ func action_shoot():
 		
 		Audio.play(weapon.sound_shoot)
 		
-		container.position.z += 0.25 # Knockback of weapon visual
-		camera.rotation.x += 0.025 # Knockback of camera
+		container.position.z += 0.1 # Knockback of weapon visual
+		camera.rotation.x += 0.015 # Knockback of camera
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
 		
 		# Set muzzle flash position, play animation
