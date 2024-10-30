@@ -1,0 +1,201 @@
+[gd_scene load_steps=8 format=3 uid="uid://d035h4lnk8dxi"]
+
+[ext_resource type="PackedScene" uid="uid://cwb3vi4qlp5p3" path="res://models/weapons/anim_gumball_fire.fbx" id="1_cinll"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drtqm"]
+albedo_color = Color(0.75353, 0.049011, 9.62615e-08, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b41mf"]
+albedo_color = Color(0.708288, 0.778803, 0.828871, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66pyp"]
+albedo_color = Color(0.66297, 0.1006, 0.0886872, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfpbj"]
+albedo_color = Color(0.657441, 0.71184, 0.723868, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7yih"]
+transparency = 1
+albedo_color = Color(0.819608, 0.847059, 0.894118, 0.301961)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmxnm"]
+albedo_color = Color(0.26375, 0.789716, 0.275147, 1)
+
+[node name="anim_gumball_fire" instance=ExtResource("1_cinll")]
+
+[node name="GEO_Base" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_drtqm")
+
+[node name="GEO_Lever_Base" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_b41mf")
+
+[node name="GEO_Lever_Pole" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base/GEO_Lever_Base" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_b41mf")
+
+[node name="GEO_Lever_Handle" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base/GEO_Lever_Base/GEO_Lever_Pole" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_66pyp")
+
+[node name="GEO_Hatch_Base" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qfpbj")
+
+[node name="GEO_Hatch_Hinge" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base/GEO_Hatch_Base" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qfpbj")
+
+[node name="GEO_Hatch_Flap" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base/GEO_Hatch_Base/GEO_Hatch_Hinge" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qfpbj")
+
+[node name="GEO_Lid" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_drtqm")
+
+[node name="GEO_Dome" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_h7yih")
+
+[node name="GEO_AnimGumball_01" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Animated_Gumballs" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_AnimGumball_02" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Animated_Gumballs" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_AnimGumball_03" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Animated_Gumballs" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_AnimGumball_04" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Animated_Gumballs" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_26" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_25" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_24" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_23" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_22" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_21" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_20" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_19" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="7"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_18" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="8"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_17" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="9"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_16" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="10"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_15" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="11"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_14" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="12"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_13" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="13"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_12" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="14"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_11" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="15"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_10" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="16"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_09" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="17"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_08" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="18"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_07" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="19"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_06" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="20"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_05" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="21"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_04" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="22"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_03" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="23"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_02" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="24"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_01" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="25"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_27" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="26"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_28" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="27"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_29" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="28"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_30" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="29"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_31" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="30"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_32" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="31"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_33" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="32"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_34" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="33"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_35" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="34"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_36" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="35"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_37" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="36"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_38" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="37"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_39" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="38"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_40" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="39"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_41" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="40"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_42" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="41"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_43" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="42"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_44" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="43"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_45" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="44"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")
+
+[node name="GEO_Gumball_46" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Dome_Gumballs/Stationary_Gumballs" index="45"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gmxnm")

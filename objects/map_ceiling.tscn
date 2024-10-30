@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkdr1thnb4k81"]
-
-[ext_resource type="PackedScene" uid="uid://bgd43q6hvo1jt" path="res://models/map_ceiling.fbx" id="1_55ad6"]
-
-[node name="map_ceiling" instance=ExtResource("1_55ad6")]

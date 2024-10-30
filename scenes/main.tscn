@@ -1,27 +1,27 @@
 [gd_scene load_steps=23 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
-[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_elriq"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player/player.tscn" id="2_elriq"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="3_psetf"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
-[ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="4_rgbis"]
-[ext_resource type="PackedScene" uid="uid://cgps3pg1uemsn" path="res://objects/enemy_spawner.tscn" id="5_3sj08"]
+[ext_resource type="Resource" uid="uid://b3c1yno0yfhow" path="res://weapons/blaster.tres" id="4_m2wy2"]
+[ext_resource type="PackedScene" uid="uid://cgps3pg1uemsn" path="res://objects/enemy_spawner/enemy_spawner.tscn" id="5_3sj08"]
 [ext_resource type="PackedScene" uid="uid://d37bnswqshwmj" path="res://ui/trickortreat.tscn" id="5_i3p2k"]
-[ext_resource type="PackedScene" uid="uid://doh288ssp2kop" path="res://objects/map_floor.tscn" id="7_jmpvu"]
+[ext_resource type="PackedScene" uid="uid://doh288ssp2kop" path="res://objects/map/map_floor.tscn" id="7_jmpvu"]
 [ext_resource type="Script" path="res://scripts/controller.gd" id="7_ucerh"]
-[ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/spook.tscn" id="8_7ty2f"]
-[ext_resource type="PackedScene" uid="uid://cgtcc3wyaxpyv" path="res://objects/map_walls.tscn" id="8_meny0"]
-[ext_resource type="PackedScene" uid="uid://bkdr1thnb4k81" path="res://objects/map_ceiling.tscn" id="10_pbef5"]
-[ext_resource type="PackedScene" uid="uid://t2yr2bnqmygd" path="res://objects/map_kitchen_assets.tscn" id="10_rw308"]
-[ext_resource type="PackedScene" uid="uid://cy0tel7s8jga3" path="res://objects/map_living_room_assets.tscn" id="11_ox5el"]
-[ext_resource type="PackedScene" uid="uid://crhih1230n6hx" path="res://objects/map_foyer_assets.tscn" id="12_g4vwm"]
-[ext_resource type="PackedScene" uid="uid://dewod72veetr" path="res://objects/super.tscn" id="12_jsidg"]
-[ext_resource type="PackedScene" uid="uid://dgmg2c8etvswu" path="res://objects/sprite.tscn" id="13_3cxcj"]
-[ext_resource type="PackedScene" uid="uid://t8ac3y1gro4n" path="res://objects/map_hallway_assets.tscn" id="13_m7fju"]
-[ext_resource type="PackedScene" uid="uid://bu6ilhkueit0h" path="res://objects/map_garage_assets.tscn" id="14_pfs28"]
-[ext_resource type="PackedScene" uid="uid://cn1xr3afpbs5i" path="res://objects/map_bedroom_assets.tscn" id="15_ibwjo"]
-[ext_resource type="PackedScene" uid="uid://dxi4ck285djnr" path="res://objects/map_bathroom_assets.tscn" id="16_jnadu"]
-[ext_resource type="PackedScene" uid="uid://bnn53jukmfpop" path="res://objects/door.tscn" id="18_sgxjl"]
+[ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemies/spook.tscn" id="8_7ty2f"]
+[ext_resource type="PackedScene" uid="uid://cgtcc3wyaxpyv" path="res://objects/map/map_walls.tscn" id="8_meny0"]
+[ext_resource type="PackedScene" uid="uid://bkdr1thnb4k81" path="res://objects/map/map_ceiling.tscn" id="10_pbef5"]
+[ext_resource type="PackedScene" uid="uid://t2yr2bnqmygd" path="res://objects/map/map_kitchen_assets.tscn" id="10_rw308"]
+[ext_resource type="PackedScene" uid="uid://cy0tel7s8jga3" path="res://objects/map/map_living_room_assets.tscn" id="11_ox5el"]
+[ext_resource type="PackedScene" uid="uid://crhih1230n6hx" path="res://objects/map/map_foyer_assets.tscn" id="12_g4vwm"]
+[ext_resource type="PackedScene" uid="uid://dewod72veetr" path="res://objects/enemies/super.tscn" id="12_jsidg"]
+[ext_resource type="PackedScene" uid="uid://dgmg2c8etvswu" path="res://objects/enemies/sprite.tscn" id="13_3cxcj"]
+[ext_resource type="PackedScene" uid="uid://t8ac3y1gro4n" path="res://objects/map/map_hallway_assets.tscn" id="13_m7fju"]
+[ext_resource type="PackedScene" uid="uid://bu6ilhkueit0h" path="res://objects/map/map_garage_assets.tscn" id="14_pfs28"]
+[ext_resource type="PackedScene" uid="uid://cn1xr3afpbs5i" path="res://objects/map/map_bedroom_assets.tscn" id="15_ibwjo"]
+[ext_resource type="PackedScene" uid="uid://dxi4ck285djnr" path="res://objects/map/map_bathroom_assets.tscn" id="16_jnadu"]
+[ext_resource type="PackedScene" uid="uid://bnn53jukmfpop" path="res://objects/map/door.tscn" id="18_sgxjl"]
 
 [node name="Main" type="Node3D"]
 
@@ -30,7 +30,7 @@ environment = ExtResource("1_q8fpv")
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") groups=["Player"] instance=ExtResource("2_elriq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.932929, 1.17868)
-weapons = Array[ExtResource("3_psetf")]([ExtResource("4_rgbis")])
+weapons = Array[ExtResource("3_psetf")]([ExtResource("4_m2wy2")])
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]

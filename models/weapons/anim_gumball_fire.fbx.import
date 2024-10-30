@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgd43q6hvo1jt"
-path="res://.godot/imported/map_ceiling.fbx-cbacd323d2538eff553b09bcef5765de.scn"
+uid="uid://cwb3vi4qlp5p3"
+path="res://.godot/imported/anim_gumball_fire.fbx-42d00c1427cd994f1626fc5365cfc5b4.scn"
 
 [deps]
 
-source_file="res://models/house_assets/map_ceiling.fbx"
-dest_files=["res://.godot/imported/map_ceiling.fbx-cbacd323d2538eff553b09bcef5765de.scn"]
+source_file="res://models/weapons/anim_gumball_fire.fbx"
+dest_files=["res://.godot/imported/anim_gumball_fire.fbx-42d00c1427cd994f1626fc5365cfc5b4.scn"]
 
 [params]
 

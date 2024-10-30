@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="1_2onsr"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
-[ext_resource type="PackedScene" uid="uid://d035h4lnk8dxi" path="res://anim_gumball_fire.tscn" id="2_o63mu"]
+[ext_resource type="PackedScene" uid="uid://d035h4lnk8dxi" path="res://objects/weapons/anim_gumball_fire.tscn" id="2_f5815"]
 
 [resource]
 script = ExtResource("2_107w7")
-model = ExtResource("2_o63mu")
+model = ExtResource("2_f5815")
 position = Vector3(-1.2, 1.1, 2.5)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
@@ -16,5 +16,5 @@ damage = 25.0
 spread = 1.935
 shot_count = 3
 knockback = 40
-sound_shoot = "sounds/blaster.ogg"
+sound_shoot = "sounds/player/shot.ogg"
 crosshair = ExtResource("1_2onsr")
