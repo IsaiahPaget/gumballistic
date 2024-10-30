@@ -39,7 +39,7 @@ func _process(_delta):
 # Take damage from player
 
 func damage(amount):
-	Audio.play("sounds/enemy/hurt1.ogg")
+	Audio.play("sounds/enemy/enemy-hurt.ogg")
 
 	self.health -= amount
 	
@@ -52,7 +52,7 @@ func damage(amount):
 		
 		
 	if health <= 0 and !destroyed:
-		Audio.play("sounds/enemy/enemy-death.ogg")
+		Audio.play("sounds/enemy/enemy-death1.ogg, sounds/enemy/enemy-death2.ogg, sounds/enemy/enemy-death3.ogg, sounds/enemy/enemy-death4.ogg, sounds/enemy/enemy-death5.ogg")
 		self.health = max_health
 		self.animation.modulate = Color("White");
 		controller.return_enemy(self)

@@ -15,5 +15,6 @@ func _on_timer_timeout() -> void:
 	$Timer.wait_time = randf_range(0.5, 1)
 	var enemy = controller.get_enemy()
 	if enemy:
+		Audio.play("sounds/enemy/enemy-spawn.ogg")
 		enemy.show()
 		enemy.global_position = global_position

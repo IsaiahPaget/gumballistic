@@ -1,10 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=21 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player/player.tscn" id="2_elriq"]
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="3_psetf"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="3_s8mkj"]
-[ext_resource type="Resource" uid="uid://b3c1yno0yfhow" path="res://weapons/blaster.tres" id="4_m2wy2"]
 [ext_resource type="PackedScene" uid="uid://cgps3pg1uemsn" path="res://objects/enemy_spawner/enemy_spawner.tscn" id="5_3sj08"]
 [ext_resource type="PackedScene" uid="uid://d37bnswqshwmj" path="res://ui/trickortreat.tscn" id="5_i3p2k"]
 [ext_resource type="PackedScene" uid="uid://doh288ssp2kop" path="res://objects/map/map_floor.tscn" id="7_jmpvu"]
@@ -30,7 +28,6 @@ environment = ExtResource("1_q8fpv")
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") groups=["Player"] instance=ExtResource("2_elriq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.932929, 1.17868)
-weapons = Array[ExtResource("3_psetf")]([ExtResource("4_m2wy2")])
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]

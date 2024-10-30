@@ -383,7 +383,7 @@ func damage(amount):
 	health_updated.emit(health) # Update health on HUD
 	
 	if health < 0:
-		Audio.play("sounds/player/playerdeath1.ogg")
+		Audio.play("sounds/player/playerdeath1.ogg, sounds/player/playerdeath2.ogg")
 		get_tree().reload_current_scene() # Reset when out of health
 		return
-	Audio.play("sounds/player/playerhurt1.ogg")
+	Audio.play("sounds/player/playerhurt1.ogg, sounds/player/playerhurt2.ogg, sounds/player/playerhurt3.ogg,  sounds/player/playerhurt4.ogg")

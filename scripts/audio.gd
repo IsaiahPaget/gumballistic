@@ -2,7 +2,7 @@ extends Node
 
 # Code adapted from KidsCanCode
 
-var num_players = 12
+var num_players = 24
 var bus = "master"
 
 var available = []  # The available players.
@@ -25,7 +25,10 @@ func _on_stream_finished(stream):
 
 func play(sound_path):  # Path (or multiple, separated by commas)
 	var sounds = sound_path.split(",")
-	queue.append("res://" + sounds[randi() % sounds.size()].strip_edges())
+	var sound = "res://" + sounds[randi() % sounds.size()].strip_edges()
+	if available.is_empty() and queue.find(sound) != -1:
+		return	
+	queue.append(sound)
 
 func _process(_delta):
 	if not queue.is_empty() and not available.is_empty():
