@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dxvvlck8lej3f"]
+[gd_scene load_steps=23 format=3 uid="uid://dxvvlck8lej3f"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_q8fpv"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player/player.tscn" id="2_elriq"]
@@ -13,13 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://t2yr2bnqmygd" path="res://objects/map/map_kitchen_assets.tscn" id="10_rw308"]
 [ext_resource type="PackedScene" uid="uid://cy0tel7s8jga3" path="res://objects/map/map_living_room_assets.tscn" id="11_ox5el"]
 [ext_resource type="PackedScene" uid="uid://crhih1230n6hx" path="res://objects/map/map_foyer_assets.tscn" id="12_g4vwm"]
-[ext_resource type="PackedScene" uid="uid://dewod72veetr" path="res://objects/enemies/super.tscn" id="12_jsidg"]
-[ext_resource type="PackedScene" uid="uid://dgmg2c8etvswu" path="res://objects/enemies/sprite.tscn" id="13_3cxcj"]
 [ext_resource type="PackedScene" uid="uid://t8ac3y1gro4n" path="res://objects/map/map_hallway_assets.tscn" id="13_m7fju"]
 [ext_resource type="PackedScene" uid="uid://bu6ilhkueit0h" path="res://objects/map/map_garage_assets.tscn" id="14_pfs28"]
 [ext_resource type="PackedScene" uid="uid://cn1xr3afpbs5i" path="res://objects/map/map_bedroom_assets.tscn" id="15_ibwjo"]
 [ext_resource type="PackedScene" uid="uid://dxi4ck285djnr" path="res://objects/map/map_bathroom_assets.tscn" id="16_jnadu"]
 [ext_resource type="PackedScene" uid="uid://bnn53jukmfpop" path="res://objects/map/door.tscn" id="18_sgxjl"]
+[ext_resource type="PackedScene" uid="uid://dewod72veetr" path="res://objects/enemies/super.tscn" id="19_3rsn7"]
+[ext_resource type="PackedScene" uid="uid://bo7goa0j0dqjh" path="res://objects/enemies/sturdy.tscn" id="20_fayr1"]
+[ext_resource type="PackedScene" uid="uid://dgmg2c8etvswu" path="res://objects/enemies/sprite.tscn" id="21_rh1l5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_laotp"]
 vertices = PackedVector3Array(-9.49288, -0.748194, -8.73997, -9.24288, -0.748194, -7.73997, -8.49288, -0.748194, -7.48997, -12.9929, -0.748194, -5.48997, -12.4929, -0.748194, -5.73997, -12.7429, -0.748194, -7.48997, -14.9929, -0.748194, -4.73997, -12.9929, -0.748194, -4.73997, -8.49288, -0.748194, -5.98997, -6.74288, -0.748194, -5.98997, -14.9929, -0.748194, -11.24, -11.9929, -0.748194, -8.73997, -6.74288, -0.748194, -11.24, 11.7571, -0.748194, -6.98997, 12.0071, -0.748194, -6.23997, 12.5071, -0.748194, -6.23997, 12.7571, -0.748194, -6.98997, 11.7571, -0.748194, -9.73997, 8.50712, -0.748194, -8.48997, 8.75712, -0.748194, -6.98997, 5.00712, -0.748194, -11.49, 3.00712, -0.748194, -11.24, 2.75712, -0.748194, -10.24, 7.50712, -0.748194, -9.48997, 7.25712, -0.748194, -11.24, 3.25712, -0.748194, -7.98997, 7.25712, -0.748194, -7.98997, 13.5071, -0.748194, -6.98997, 13.5071, -0.748194, -10.49, 7.50712, -0.748194, -8.48997, 3.00712, -0.748194, -8.48997, 0.00712204, -0.748194, -9.98997, 0.00712204, -0.748194, -8.48997, 11.7571, -0.748194, -5.48997, 12.7571, -0.748194, -5.48997, 17.5071, -0.748194, -6.73997, 16.7571, -0.748194, -6.73997, 16.5071, -0.748194, -5.48997, 11.7571, -0.748194, 1.01003, 12.0071, -0.748194, 1.76003, 12.5071, -0.748194, 1.76003, 12.7571, -0.748194, 1.01003, 15.5071, -0.748194, -2.73997, 8.75712, -0.748194, -5.48997, 8.75712, -0.748194, 1.01003, 18.0071, -0.748194, -2.73997, 18.0071, -0.748194, -5.48997, 17.5071, -0.748194, -5.73997, 18.0071, -0.748194, -6.98997, 18.0071, -0.748194, -11.24, 16.0071, -0.748194, -11.24, 16.0071, -0.748194, -6.98997, 15.2571, -0.748194, 1.01003, -3.24288, -0.748194, -2.48997, -2.24288, -0.748194, -2.48997, -1.99288, -0.748194, -3.23997, -1.99288, -0.748194, -4.98997, -3.49288, -0.748194, -3.23997, -2.24288, -0.748194, -8.23997, -3.99288, -0.748194, -10.24, -3.99288, -0.748194, -3.23997, 3.00712, -0.748194, -4.98997, 4.75712, -0.748194, -3.23997, 5.00712, -0.748194, -1.23997, 7.25712, -0.748194, -1.73997, -10.2429, 0.251806, -7.73997, -11.2429, 0.251806, -7.73997, -11.7429, 0.251806, -6.98997, -11.4929, 0.251806, -4.23997, -10.2429, 0.251806, -4.23997, -1.24288, 0.251806, -7.48997, -1.24288, 0.251806, -5.98997, 2.25712, 0.251806, -5.98997, 2.25712, 0.251806, -7.48997, -13.9929, -0.748194, 5.01003, -13.9929, -0.748194, 6.51003, -12.2429, -0.748194, 6.51003, -12.2429, -0.748194, 4.51003, -16.4929, -0.748194, -1.23997, -16.4929, -0.748194, 0.260033, -14.9929, -0.748194, 1.76003, -14.9929, -0.748194, -2.98997, -11.7429, -0.748194, 4.01003, -14.9929, -0.748194, 4.76003, -8.99288, -0.748194, 6.26003, -6.74288, -0.748194, 6.76003, -6.74288, -0.748194, 5.01003, -5.99288, -0.748194, 4.76003, -5.99288, -0.748194, 2.51003, -11.9929, -0.748194, -3.23997, -8.74288, -0.748194, -4.23997, -9.24288, -0.748194, 4.01003, -6.74288, -0.748194, 2.26003, -9.49288, -0.748194, -3.23997, 3.25712, -0.748194, -1.73997, 2.75712, -0.748194, -1.73997, 2.50712, -0.748194, -0.489967, 3.25712, -0.748194, 2.51003, -1.99288, -0.748194, -1.73997, -3.49288, -0.748194, -1.73997, 0.00712204, -0.748194, -0.489967, 3.25712, -0.748194, 11.26, 3.25712, -0.748194, 9.76003, 2.25712, -0.748194, 9.51003, -4.99288, -0.748194, 11.26, 2.25712, -0.748194, 7.01003, 3.25712, -0.748194, 6.76003, 3.25712, -0.748194, 5.01003, -0.242878, -0.748194, -1.73997, 4.00712, -0.748194, 4.76003, 4.00712, -0.748194, 2.76003, -4.99288, -0.748194, 5.01003, -4.99288, -0.748194, 2.26003, -4.99288, -0.748194, -1.73997, 7.25712, -0.748194, 5.01003, 7.75712, -0.748194, 4.76003, 7.75712, -0.748194, 2.76003, 5.00712, -0.748194, 2.51003, 7.25712, -0.748194, 2.51003, 5.00712, -0.748194, 5.01003, 5.00712, -0.748194, 11.01, 7.25712, -0.748194, 11.01, 16.2571, 0.501806, -1.73997, 16.2571, 0.501806, 0.760033, 18.0071, 0.501806, 0.760033, 18.0071, 0.501806, -1.73997, 12.7571, -0.748194, 2.76003, 11.7571, -0.748194, 2.76003, 8.75712, -0.748194, 15.26, 11.5071, -0.748194, 13.76, 11.2571, -0.748194, 11.76, 12.2571, -0.748194, 7.76003, 13.5071, -0.748194, 7.76003, 13.5071, -0.748194, 6.26003, 12.5071, -0.748194, 6.01003, 12.0071, -0.748194, 5.01003, 13.2571, -0.748194, 15.51, 13.5071, -0.748194, 14.26, 11.7571, -0.748194, 6.26003, 11.5071, -0.748194, 8.51003, 15.7571, -0.748194, 4.26003, 18.0071, -0.748194, 4.76003, 18.0071, -0.748194, 2.76003, 12.7571, -0.748194, 4.76003, 15.5071, -0.748194, 4.76003, 8.75712, -0.748194, 6.26003, -13.9929, -0.748194, 8.26003, -11.9929, -0.748194, 9.26003, -9.24288, -0.748194, 9.51003, -6.74288, -0.748194, 11.26, -14.9929, -0.748194, 8.51003, -14.9929, -0.748194, 11.26, 15.0071, -0.748194, 13.76, 18.0071, -0.748194, 15.26, 15.0071, -0.748194, 8.26003, 18.0071, -0.748194, 6.26003, 15.2571, -0.748194, 11.76, 12.7571, 1.25181, 10.26, 12.7571, 1.25181, 11.26, 13.7571, 1.25181, 11.26, 13.7571, 1.25181, 10.26, 12.7571, 0.751806, 13.26, 14.0071, 0.751806, 13.26, 14.0071, 0.751806, 12.51, 12.5071, 0.751806, 12.51)
@@ -31,15 +32,10 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Arr
 environment = ExtResource("1_q8fpv")
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") groups=["Player"] instance=ExtResource("2_elriq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.932929, 1.17868)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.932929, 1.17868)
 crosshair = NodePath("../HUD/Crosshair")
 
-[node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
-shadow_enabled = true
-shadow_opacity = 0.75
-
-[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("health_label", "firerate_label", "poise_label", "damage_label", "accuracy_label", "speed_label", "shotcount_label")]
+[node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("health_label", "firerate_label", "poise_label", "damage_label", "accuracy_label", "speed_label", "shotcount_label", "kills_label")]
 script = ExtResource("3_s8mkj")
 health_label = NodePath("VBoxContainer/Health")
 firerate_label = NodePath("VBoxContainer/Firerate")
@@ -48,6 +44,7 @@ damage_label = NodePath("VBoxContainer/Damage")
 accuracy_label = NodePath("VBoxContainer/Bulletspread")
 speed_label = NodePath("VBoxContainer/Speed")
 shotcount_label = NodePath("VBoxContainer/Shotcount")
+kills_label = NodePath("CenterContainer/Label")
 
 [node name="Crosshair" type="TextureRect" parent="HUD"]
 anchors_preset = 8
@@ -128,19 +125,30 @@ vertical_alignment = 2
 visible = false
 controller = NodePath("../../Controller")
 
+[node name="CenterContainer" type="CenterContainer" parent="HUD"]
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 122.0
+offset_bottom = 71.0
+
+[node name="Label" type="Label" parent="HUD/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Kills: 0"
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemySpawner" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.195, -1, -5.787)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.385, 0, -14.6654)
 
 [node name="EnemySpawner2" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.315, -1, 7.788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4401, 0, 19.367)
 
 [node name="EnemySpawner3" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8911, -1, -5.0009)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.193, 0, -14.145)
 
 [node name="EnemySpawner4" parent="Enemies" instance=ExtResource("5_3sj08")]
-transform = Transform3D(0.999993, 0, 0.00378736, 0, 1, 0, -0.00378736, 0, 0.999993, -1.9291, -1, 5.04599)
+transform = Transform3D(0.999993, 0, 0.00378736, 0, 1, 0, -0.00378736, 0, 0.999993, -1.929, 0, 13.5522)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_laotp")
@@ -148,7 +156,7 @@ navigation_mesh = SubResource("NavigationMesh_laotp")
 [node name="Level" type="Node" parent="NavigationRegion3D"]
 
 [node name="map_floor" parent="NavigationRegion3D/Level" instance=ExtResource("7_jmpvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1.32546, 0, 0, 0, 1, 0, 0, 0, 1.42263, 0, -1, 0)
 
 [node name="map_walls" parent="NavigationRegion3D/Level" instance=ExtResource("8_meny0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -194,9 +202,18 @@ transform = Transform3D(2.92258, 0, 0, 0, 1.51063, 0, 0, 0, 1, 12.773, 0.62848, 
 [node name="Controller" type="Node" parent="." node_paths=PackedStringArray("trick_or_treat") groups=["Controller"]]
 script = ExtResource("7_ucerh")
 spook_scn = ExtResource("8_7ty2f")
-speedy_scn = ExtResource("12_jsidg")
-fairy_scn = ExtResource("13_3cxcj")
+super_scn = ExtResource("19_3rsn7")
+sturdy_scn = ExtResource("20_fayr1")
+sprite_scn = ExtResource("21_rh1l5")
 trick_or_treat = NodePath("../HUD/Trickortreat")
+
+[node name="AttackTimer" type="Timer" parent="Controller"]
+wait_time = 0.25
+autostart = true
+
+[node name="NavTimer" type="Timer" parent="Controller"]
+wait_time = 0.25
+autostart = true
 
 [connection signal="accuracy_updated" from="Player" to="HUD" method="_on_player_accuracy_updated"]
 [connection signal="damage_updated" from="Player" to="HUD" method="_on_player_damage_updated"]
@@ -205,3 +222,6 @@ trick_or_treat = NodePath("../HUD/Trickortreat")
 [connection signal="poise_updated" from="Player" to="HUD" method="_on_player_poise_updated"]
 [connection signal="shotcount_updated" from="Player" to="HUD" method="_on_player_shotcount_updated"]
 [connection signal="speed_updated" from="Player" to="HUD" method="_on_player_speed_updated"]
+[connection signal="enemy_killed" from="Controller" to="HUD" method="_on_controller_enemy_killed"]
+[connection signal="timeout" from="Controller/AttackTimer" to="Controller" method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="Controller/NavTimer" to="Controller" method="_on_nav_timer_timeout"]

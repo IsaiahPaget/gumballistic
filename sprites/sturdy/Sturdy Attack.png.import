@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqx600kf5om0n"
-path.s3tc="res://.godot/imported/Super Attack.png-a92224e0405923d8139fb6548074e6f1.s3tc.ctex"
+uid="uid://dsch0sufdx7ma"
+path.s3tc="res://.godot/imported/Sturdy Attack.png-bd99b514a991f101abf06b633f27fb5d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/super/Super Attack.png"
-dest_files=["res://.godot/imported/Super Attack.png-a92224e0405923d8139fb6548074e6f1.s3tc.ctex"]
+source_file="res://sprites/sturdy/Sturdy Attack.png"
+dest_files=["res://.godot/imported/Sturdy Attack.png-bd99b514a991f101abf06b633f27fb5d.s3tc.ctex"]
 
 [params]
 

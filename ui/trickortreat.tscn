@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d37bnswqshwmj"]
+[gd_scene load_steps=9 format=3 uid="uid://d37bnswqshwmj"]
 
 [ext_resource type="Script" path="res://ui/trickortreat.gd" id="1_o0o6c"]
+[ext_resource type="Texture2D" uid="uid://blwtirbt3r755" path="res://sprites/ui/treats/Strength.png" id="2_dwon1"]
+[ext_resource type="Texture2D" uid="uid://bxkbqct3dy782" path="res://sprites/ui/treats/Treat Text.png" id="2_h16bc"]
+[ext_resource type="Texture2D" uid="uid://bwah1kin8suiu" path="res://sprites/ui/treats/Speed.png" id="3_2t0mo"]
+[ext_resource type="Texture2D" uid="uid://dginv0q8un6o8" path="res://sprites/ui/treats/Fire Rate.png" id="4_6s2ur"]
+[ext_resource type="Texture2D" uid="uid://dhiyrthsy8mdy" path="res://sprites/ui/treats/Accuracy.png" id="5_0jrvl"]
+[ext_resource type="Texture2D" uid="uid://c7f8svwnatf55" path="res://sprites/ui/treats/Poise.png" id="6_4fxp1"]
+[ext_resource type="Texture2D" uid="uid://dphv83748wh53" path="res://sprites/ui/treats/Multishot.png" id="7_io5id"]
 
 [node name="Trickortreat" type="Control"]
 layout_mode = 3
@@ -11,31 +18,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o0o6c")
 
-[node name="Label" type="Label" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -145.0
-offset_top = 86.0
-offset_right = 183.0
-offset_bottom = 109.0
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
 grow_horizontal = 2
-text = "You may need to click multiple times, if you loose your mouse press escape [esc] sorry lol"
+
+[node name="TreatText" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(0, 80)
+scale = Vector2(0.265625, 0.265625)
+texture = ExtResource("2_h16bc")
 
 [node name="BoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -223.0
-offset_right = 41.0
-offset_bottom = -170.0
+offset_left = -678.0
+offset_top = -75.0
+offset_right = -269.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.88, 1.88)
+scale = Vector2(3.24, 3.24)
+alignment = 1
 
 [node name="HealthButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
@@ -43,32 +55,51 @@ text = "Health"
 
 [node name="DamageButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-text = "Damage"
+size_flags_horizontal = 3
+icon = ExtResource("2_dwon1")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="SpeedButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-text = "Speed"
+size_flags_horizontal = 3
+icon = ExtResource("3_2t0mo")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="FirerateButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Fire rate"
+size_flags_horizontal = 3
+icon = ExtResource("4_6s2ur")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="AccuracyButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Accuracy"
+size_flags_horizontal = 3
+icon = ExtResource("5_0jrvl")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="PoiseButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Poise
-"
+size_flags_horizontal = 3
+icon = ExtResource("6_4fxp1")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="ShotCountButton" type="Button" parent="BoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Multi shot"
+size_flags_horizontal = 3
+icon = ExtResource("7_io5id")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="BoxContainer/HealthButton" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="BoxContainer/DamageButton" to="." method="_on_damage_button_pressed"]

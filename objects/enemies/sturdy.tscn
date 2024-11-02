@@ -1,21 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://dewod72veetr"]
+[gd_scene load_steps=10 format=3 uid="uid://bo7goa0j0dqjh"]
 
-[ext_resource type="Script" path="res://objects/enemies/enemy.gd" id="1_jfsns"]
-[ext_resource type="Texture2D" uid="uid://cclqivh715mk3" path="res://sprites/super/Super Antic.png" id="2_tj2fl"]
-[ext_resource type="Texture2D" uid="uid://cqx600kf5om0n" path="res://sprites/super/Super Attack.png" id="3_yy1yp"]
-[ext_resource type="Texture2D" uid="uid://bs8hcrhpernxk" path="res://sprites/super/Super Hurt.png" id="4_wcxg7"]
-[ext_resource type="Texture2D" uid="uid://vbfxtm351sfx" path="res://sprites/super/Super Run 1.png" id="5_mvwin"]
-[ext_resource type="Texture2D" uid="uid://bbvve8wjjtssv" path="res://sprites/super/Super Run 2.png" id="6_ex5gd"]
-[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="8_g2eyp"]
+[ext_resource type="Script" path="res://objects/enemies/enemy.gd" id="1_6xujs"]
+[ext_resource type="Texture2D" uid="uid://bgpoysmrtnwim" path="res://sprites/sturdy/Sturdy Antic.png" id="2_ehw6m"]
+[ext_resource type="Texture2D" uid="uid://dsch0sufdx7ma" path="res://sprites/sturdy/Sturdy Attack.png" id="3_byur0"]
+[ext_resource type="Texture2D" uid="uid://bturcuvda603j" path="res://sprites/sturdy/Sturdy Hurt.png" id="4_c2h5l"]
+[ext_resource type="Texture2D" uid="uid://c3n2rcmtc0oo7" path="res://sprites/sturdy/Sturdy Walk 1.png" id="5_nmsc1"]
+[ext_resource type="Texture2D" uid="uid://bwg17ibvu3cvt" path="res://sprites/sturdy/Sturdy Walk 2.png" id="6_sk6fr"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="7_68nfa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8fl5f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tj2fl")
+"texture": ExtResource("2_ehw6m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yy1yp")
+"texture": ExtResource("3_byur0")
 }],
 "loop": true,
 "name": &"attack",
@@ -23,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_wcxg7")
+"texture": ExtResource("4_c2h5l")
 }],
 "loop": true,
 "name": &"hurt",
@@ -31,14 +31,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_mvwin")
+"texture": ExtResource("5_nmsc1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ex5gd")
+"texture": ExtResource("6_sk6fr")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 6.0
+"speed": 3.0
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iix87"]
@@ -48,7 +48,7 @@ radius = 0.75
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591225, 0)
 collision_layer = 4
 collision_mask = 3
-script = ExtResource("1_jfsns")
+script = ExtResource("1_6xujs")
 max_health = 25
 speed = 5
 
@@ -57,7 +57,7 @@ transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
 billboard = 1
 shaded = true
 sprite_frames = SubResource("SpriteFrames_8fl5f")
-animation = &"attack"
+animation = &"hurt"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.778187, 0, 0, 0, 0.778187, 0, 0, 0, 0.778187, 0, -0.208219, 0)
@@ -69,13 +69,13 @@ target_position = Vector3(0, 0, 0.75)
 [node name="MuzzleA" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.45, 0.3, 0.4)
 visible = false
-sprite_frames = ExtResource("8_g2eyp")
+sprite_frames = ExtResource("7_68nfa")
 frame = 2
 
 [node name="MuzzleB" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.45, 0.3, 0.4)
 visible = false
-sprite_frames = ExtResource("8_g2eyp")
+sprite_frames = ExtResource("7_68nfa")
 frame = 2
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

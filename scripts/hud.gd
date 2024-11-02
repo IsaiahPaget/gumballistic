@@ -7,6 +7,7 @@ extends CanvasLayer
 @export var accuracy_label: Label
 @export var speed_label: Label
 @export var shotcount_label: Label
+@export var kills_label: Label
 
 # Old value placeholders
 var _old_health = 0
@@ -78,7 +79,7 @@ func _on_player_poise_updated(poise) -> void:
 
 
 func _on_player_firerate_updated(firerate) -> void:
-	if firerate > _old_firerate:
+	if firerate < _old_firerate:
 		firerate_label.text = "firerate: " + str(firerate)
 		firerate_label.add_theme_color_override("font_color", Color(0, 1, 0))  # Green
 	elif firerate == _old_firerate:
@@ -107,7 +108,7 @@ func _on_player_damage_updated(damage) -> void:
 	_old_damage = damage
 
 func _on_player_accuracy_updated(spread) -> void:
-	if spread > _old_spread:
+	if spread < _old_spread:
 		accuracy_label.text = "spread: " + str(spread)
 		accuracy_label.add_theme_color_override("font_color", Color(0, 1, 0))  # Green
 	elif spread == _old_spread:
@@ -119,3 +120,7 @@ func _on_player_accuracy_updated(spread) -> void:
 
 	# Update the old spread and return it
 	_old_spread = spread
+
+
+func _on_controller_enemy_killed(kills) -> void:
+	kills_label.text = "Kills: " + str(kills)

@@ -49,10 +49,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591225, 0)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_lcl4a")
+max_health = 50
+speed = 4
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
 billboard = 1
+shaded = true
 sprite_frames = SubResource("SpriteFrames_8fl5f")
 animation = &"attack"
 
@@ -75,12 +78,6 @@ visible = false
 sprite_frames = ExtResource("8_f4mir")
 frame = 2
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.25
-autostart = true
-
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_height_offset = -0.5
 avoidance_enabled = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

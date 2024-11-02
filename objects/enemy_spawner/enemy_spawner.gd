@@ -17,4 +17,8 @@ func _on_timer_timeout() -> void:
 	if enemy:
 		Audio.play("sounds/enemy/enemy-spawn.ogg")
 		enemy.show()
+		if not controller.enemy_attack.is_connected(enemy.attack):
+			controller.enemy_attack.connect(enemy.attack)
+		if not controller.enemy_nav.is_connected(enemy.navigate):
+			controller.enemy_nav.connect(enemy.navigate)
 		enemy.global_position = global_position

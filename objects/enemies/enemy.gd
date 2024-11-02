@@ -2,14 +2,14 @@ extends CharacterBody3D
 class_name Enemy
 
 @onready var player := get_tree().get_first_node_in_group("Player")
-@onready var raycast = $RayCast
+@onready var raycast = $RayCast as RayCast3D
 @onready var muzzle_a = $MuzzleA
 @onready var muzzle_b = $MuzzleB
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var animation := $AnimatedSprite3D
-@onready var controller = get_tree().get_first_node_in_group("Controller")
+@onready var controller = get_tree().get_first_node_in_group("Controller") as Controller
 
-@export_range(50, 300) var max_health := 100
+@export_range(10, 100) var max_health := 100
 @onready var health := max_health
 @export var speed := 3
 
@@ -22,7 +22,6 @@ var next_nav_point: Vector3
 
 func _ready():
 	target_position = position
-
 
 func _process(_delta):
 	self.look_at(player.position + Vector3(0, 0.5, 0), Vector3.UP, true)
@@ -59,8 +58,10 @@ func damage(amount):
 
 	
 
-func _on_timer_timeout():
+func navigate():
 	next_nav_point = nav.get_next_path_position()
+
+func attack():
 	raycast.force_raycast_update()
 
 	if raycast.is_colliding():

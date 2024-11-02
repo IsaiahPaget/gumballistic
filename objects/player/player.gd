@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name Player
 @export_subgroup("Properties")
-@export var movement_speed := 5
+@export var movement_speed := 5 as float
 @export var jump_strength := 8
 
 @export_subgroup("Weapons")
@@ -19,6 +19,7 @@ var movement_velocity: Vector3
 var rotation_target: Vector3
 
 var input_mouse: Vector2
+var _taking_damage := false
 
 @export var max_health:int = 100
 @export var health_upgrade_rate := 10
@@ -26,7 +27,7 @@ var input_mouse: Vector2
 @export var damage_upgrade_rate := 10
 @export var firerate_upgrade_rate := 0.1
 @export var poise_upgrade_rate := 1
-@export var accuracy_upgrade_rate := 1
+@export var accuracy_upgrade_rate := 0.1
 
 var gravity := 0.0
 
@@ -248,8 +249,8 @@ func degrade_firerate() -> void:
 func degrade_accuracy() -> void:
 	for weapon_it in weapons:
 		weapon_it.spread += accuracy_upgrade_rate
-		if weapon_it.spread >= 5:
-			weapon_it.spread = 5
+		if weapon_it.spread >= 2:
+			weapon_it.spread = 2
 
 func degrade_poise() -> void:
 	for weapon_it in weapons:
@@ -378,7 +379,10 @@ func change_weapon():
 	crosshair.texture = weapon.crosshair
 
 func damage(amount):
-	
+	if _taking_damage:
+		return
+
+	_taking_damage = true
 	health -= amount
 	health_updated.emit(health) # Update health on HUD
 	
@@ -387,3 +391,4 @@ func damage(amount):
 		get_tree().reload_current_scene() # Reset when out of health
 		return
 	Audio.play("sounds/player/playerhurt1.ogg, sounds/player/playerhurt2.ogg, sounds/player/playerhurt3.ogg,  sounds/player/playerhurt4.ogg")
+	_taking_damage = false

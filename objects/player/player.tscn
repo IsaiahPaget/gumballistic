@@ -13,7 +13,7 @@ height = 1.0
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.5, 0)
-collision_mask = 2
+collision_mask = 10
 script = ExtResource("1_ffboj")
 weapons = Array[ExtResource("2_2xc8r")]([ExtResource("3_kr4p8")])
 
@@ -28,6 +28,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 cull_mask = 1048573
 current = true
 fov = 80.0
+
+[node name="PointLight2D" type="SpotLight3D" parent="Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0273209, -0.0119397)
+light_color = Color(1, 0.929602, 0.616628, 1)
+light_energy = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+spot_range = 15.0
+spot_angle = 35.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Camera"]
 anchors_preset = 15
