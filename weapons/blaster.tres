@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bnighp0apmgsk" path="res://sprites/ui/Candybar Aim Marker.png" id="1_ssxqc"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
-[ext_resource type="PackedScene" uid="uid://d035h4lnk8dxi" path="res://objects/weapons/anim_gumball_fire.tscn" id="2_f5815"]
+[ext_resource type="PackedScene" uid="uid://bxyo2kbf16din" path="res://objects/weapons/gumball_rig_base.tscn" id="2_hkqxk"]
 
 [resource]
 script = ExtResource("2_107w7")
-model = ExtResource("2_f5815")
+model = ExtResource("2_hkqxk")
 position = Vector3(-1.2, 1.1, 2.5)
 rotation = Vector3(0, 180, 0)
 muzzle_position = Vector3(0.1, -0.4, 1.5)
