@@ -11,22 +11,13 @@ class_name Controller
 @onready var enemy_scenes := [spook_scn, super_scn, sprite_scn, sturdy_scn]
 
 var _enemies := []
-@onready var _banes := [
-	player.degrade_health,
-	player.degrade_firerate,
-	player.degrade_poise,
-	player.degrade_speed,
-	player.degrade_damage,
-	player.degrade_shot_count,
-	player.degrade_accuracy,
-]
-
 var level = 1
 var _kills = 0
 @export var max_enemies = 5
 
 var _enemies_in_game := 0
 var _is_looking_at_menu := false
+var _enemies_in_play := 0
 
 signal trick_or_treat_selection_made
 signal enemy_attack
@@ -50,6 +41,9 @@ func _process(_delta: float) -> void:
 		_enemies_in_game += 1
 
 	if _kills >= max_enemies and not _is_looking_at_menu:
+		open_treat_menu()
+
+func open_treat_menu():
 		_is_looking_at_menu = true
 		player.in_menu = true
 		level += 1
@@ -64,6 +58,8 @@ func _process(_delta: float) -> void:
 		max_enemies += 1
 
 func get_enemy() -> Enemy:
+	if not _enemies_in_play < max_enemies:
+		return
 	return _enemies.pop_back()
 
 func return_enemy(enemy: Enemy) -> void:
@@ -93,12 +89,11 @@ func trick_or_treat_select(selection: String) -> void:
 		'shot_count':
 			player.upgrade_shot_count()
 
-	var rand_index = randi() % _banes.size()	
-	_banes[rand_index].call()
 	trick_or_treat_selection_made.emit()
 	_is_looking_at_menu = false
 	player.in_menu = false
 	player.update_ui_stats()
+
 
 func _on_nav_timer_timeout() -> void:
 	enemy_nav.emit()
@@ -106,3 +101,5 @@ func _on_nav_timer_timeout() -> void:
 
 func _on_attack_timer_timeout() -> void:
 	enemy_attack.emit()
+
+

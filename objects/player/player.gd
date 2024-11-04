@@ -222,47 +222,47 @@ func upgrade_shot_count() -> void:
 		if weapon_it.shot_count >= 10:
 			weapon_it.shot_cont = 10
 
-func degrade_health() -> void:
-	max_health -= health_upgrade_rate
-	health = max_health
-	if health <= 10:
-		health = 10
-	health_updated.emit(health) # Update health on HUD
-
-func degrade_speed() -> void:
-	movement_speed -= speed_upgrade_rate
-	if movement_speed <= 0.1:
-		movement_speed = 0.1
-
-func degrade_damage() -> void:
-	for weapon_it in weapons:
-		weapon_it.damage -= damage_upgrade_rate
-		if weapon_it.damage <= 1:
-			weapon_it.damage = 1
-
-func degrade_firerate() -> void:
-	for weapon_it in weapons:
-		weapon_it.cooldown += firerate_upgrade_rate
-		if weapon_it.cooldown >= 1:
-			weapon_it.cooldown = 1
-
-func degrade_accuracy() -> void:
-	for weapon_it in weapons:
-		weapon_it.spread += accuracy_upgrade_rate
-		if weapon_it.spread >= 2:
-			weapon_it.spread = 2
-
-func degrade_poise() -> void:
-	for weapon_it in weapons:
-		weapon_it.knockback += poise_upgrade_rate
-		if weapon_it.knockback >= 50:
-			weapon_it.knockback = 50
-
-func degrade_shot_count() -> void:
-	for weapon_it in weapons:
-		weapon_it.shot_count -= 1
-		if weapon_it.shot_count <= 1:
-			weapon_it.shot_count = 1
+# func degrade_health() -> void:
+# 	max_health -= health_upgrade_rate
+# 	health = max_health
+# 	if health <= 10:
+# 		health = 10
+# 	health_updated.emit(health) # Update health on HUD
+#
+# func degrade_speed() -> void:
+# 	movement_speed -= speed_upgrade_rate
+# 	if movement_speed <= 0.1:
+# 		movement_speed = 0.1
+#
+# func degrade_damage() -> void:
+# 	for weapon_it in weapons:
+# 		weapon_it.damage -= damage_upgrade_rate
+# 		if weapon_it.damage <= 1:
+# 			weapon_it.damage = 1
+#
+# func degrade_firerate() -> void:
+# 	for weapon_it in weapons:
+# 		weapon_it.cooldown += firerate_upgrade_rate
+# 		if weapon_it.cooldown >= 1:
+# 			weapon_it.cooldown = 1
+#
+# func degrade_accuracy() -> void:
+# 	for weapon_it in weapons:
+# 		weapon_it.spread += accuracy_upgrade_rate
+# 		if weapon_it.spread >= 2:
+# 			weapon_it.spread = 2
+#
+# func degrade_poise() -> void:
+# 	for weapon_it in weapons:
+# 		weapon_it.knockback += poise_upgrade_rate
+# 		if weapon_it.knockback >= 50:
+# 			weapon_it.knockback = 50
+#
+# func degrade_shot_count() -> void:
+# 	for weapon_it in weapons:
+# 		weapon_it.shot_count -= 1
+# 		if weapon_it.shot_count <= 1:
+# 			weapon_it.shot_count = 1
 func action_jump():
 	
 	gravity = -jump_strength
