@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnighp0apmgsk" path="res://sprites/ui/Candybar Aim Marker.png" id="1_ssxqc"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_107w7"]
-[ext_resource type="PackedScene" uid="uid://bxyo2kbf16din" path="res://objects/weapons/gumball_rig_base.tscn" id="2_hkqxk"]
+[ext_resource type="PackedScene" uid="uid://dr8c5ft8gsnn0" path="res://objects/weapons/gumball_rig_base.tscn" id="2_hkqxk"]
 
 [resource]
 script = ExtResource("2_107w7")

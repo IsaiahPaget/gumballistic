@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2o1uju75kiyd"]
+
+[ext_resource type="Script" path="res://ui/HealthBar/health_bar.gd" id="1_mhuwi"]
+[ext_resource type="Texture2D" uid="uid://3v506ytwkqpn" path="res://sprites/ui/HP Bar.png" id="2_hhc3m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77piy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq215"]
+bg_color = Color(0.6, 0.92549, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsaqc"]
+bg_color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjb5h"]
+bg_color = Color(0.873353, 0.476674, 0.310069, 1)
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_mhuwi")
+
+[node name="HpBar" type="Sprite2D" parent="."]
+z_index = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_hhc3m")
+
+[node name="Fill" type="ProgressBar" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -12.0
+offset_right = -37.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.240557
+scale = Vector2(3.64646, 0.785653)
+theme_override_styles/background = SubResource("StyleBoxEmpty_77piy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iq215")
+value = 50.0
+show_percentage = false
+
+[node name="Damage" type="ProgressBar" parent="Fill"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_tsaqc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bjb5h")
+value = 70.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -37,7 +37,7 @@ var jump_single := true
 var jump_double := true
 
 var container_offset = Vector3(1.2, -1.1, -2.75)
-
+var _weapon_model
 var tween:Tween
 
 signal health_updated
@@ -63,7 +63,6 @@ signal firerate_updated
 # Functions
 
 func _ready():
-	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	weapon = weapons[weapon_index] # Weapon must never be nil
@@ -284,7 +283,9 @@ func action_shoot():
 		if !blaster_cooldown.is_stopped(): return # Cooldown for shooting
 		
 		Audio.play(weapon.sound_shoot)
-		#weapon.model.shoot()
+		if _weapon_model:
+			if _weapon_model.has_method('shoot'):
+				_weapon_model.shoot()
 		container.position.z += 0.1 # Knockback of weapon visual
 		camera.rotation.x += 0.015 # Knockback of camera
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
@@ -364,18 +365,18 @@ func change_weapon():
 	
 	# Step 2. Place new weapon model in container
 	
-	var weapon_model = weapon.model.instantiate()
-	container.add_child(weapon_model)
+	_weapon_model = weapon.model.instantiate()
+	container.add_child(_weapon_model)
 	
 	
-	weapon_model.position = weapon.position
-	weapon_model.rotation_degrees = weapon.rotation
+	_weapon_model.position = weapon.position
+	_weapon_model.rotation_degrees = weapon.rotation
 	
 	
 	
 	# Step 3. Set model to only render on layer 2 (the weapon camera)
 	
-	for child in weapon_model.find_children("*", "MeshInstance3D"):
+	for child in _weapon_model.find_children("*", "MeshInstance3D"):
 		child.layers = 2	
 		
 	# Set weapon data
@@ -389,7 +390,6 @@ func damage(amount):
 
 	_taking_damage = true
 	health -= amount
-	health_updated.emit(health) # Update health on HUD
 	
 	if health < 0:
 		Audio.play("sounds/player/playerdeath1.ogg, sounds/player/playerdeath2.ogg")
@@ -397,3 +397,4 @@ func damage(amount):
 		return
 	Audio.play("sounds/player/playerhurt1.ogg, sounds/player/playerhurt2.ogg, sounds/player/playerhurt3.ogg,  sounds/player/playerhurt4.ogg")
 	_taking_damage = false
+	health_updated.emit(health) # Update health on HUD

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var health_label: Label
+@export var health_bar: Control
 @export var firerate_label: Label
 @export var poise_label: Label
 @export var damage_label: Label
@@ -10,7 +10,6 @@ extends CanvasLayer
 @export var kills_label: Label
 
 # Old value placeholders
-var _old_health = 0
 var _old_firerate = 0
 var _old_poise = 0
 var _old_damage = 0
@@ -20,18 +19,7 @@ var _old_shotcount = 0
 
 # Event handler for health updates
 func _on_health_updated(health):
-	if health > _old_health:
-		health_label.text = "health: " + str(health)
-		health_label.add_theme_color_override("font_color", Color(0, 1, 0))  # Green
-	elif health == _old_health:
-		health_label.text = "health: " + str(health)
-		health_label.add_theme_color_override("font_color", Color(1, 1, 1))  # White
-	else:
-		health_label.text = "health: " + str(health)
-		health_label.add_theme_color_override("font_color", Color(1, 0, 0))  # Red
-
-	# Update the old health and return it
-	_old_health = health
+	health_bar.set_health(health)
 
 
 func _on_player_speed_updated(speed) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxyo2kbf16din"]
+[gd_scene load_steps=12 format=3 uid="uid://dr8c5ft8gsnn0"]
 
 [ext_resource type="PackedScene" uid="uid://carrpjdwvi6mc" path="res://models/weapons/gumball_rig_base.fbx" id="1_im525"]
 [ext_resource type="Animation" uid="uid://usgsorymkari" path="res://animations/weapons/gumball_gum/anim_gumball_fire_gum.res" id="2_5yfnd"]
@@ -628,7 +628,7 @@ animation = &"anim_gumball_idle_loop"
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_nyv65"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_62xk5"]
-graph_offset = Vector2(-524.343, -69.6551)
+graph_offset = Vector2(-555, -115)
 "nodes/Fire Gum/node" = SubResource("AnimationNodeAnimation_2t1l2")
 "nodes/Fire Gum/position" = Vector2(-100, 140)
 "nodes/Idle Loop/node" = SubResource("AnimationNodeAnimation_010rd")
@@ -643,17 +643,16 @@ script = ExtResource("2_xcwuk")
 
 [node name="Skeleton3D" parent="Skeleton" index="0"]
 bones/1/position = Vector3(-0.00122214, 0.00023189, 0.00195459)
-bones/1/rotation = Quaternion(-0.0154939, 0.04911, 0.826563, 0.560484)
+bones/1/rotation = Quaternion(-0.0158661, 0.0476948, 0.826771, 0.560288)
 bones/2/rotation = Quaternion(0.854909, 2.10193e-06, -1.34657e-06, 0.518779)
-bones/3/rotation = Quaternion(0.119295, 0.8108, 0.274788, 0.502855)
-bones/4/rotation = Quaternion(0.0807843, 0.623268, 0.0892779, 0.772684)
+bones/3/rotation = Quaternion(0.118424, 0.810233, 0.2745, 0.504131)
 bones/5/rotation = Quaternion(-0.300398, 0.0548669, -0.0293988, 0.951781)
 bones/6/rotation = Quaternion(-0.0718968, 1.11997e-06, 1.34251e-06, 0.997412)
 bones/7/rotation = Quaternion(-0.141047, -2.1327e-06, -1.66259e-06, 0.990003)
 bones/10/rotation = Quaternion(-0.384256, 0.0582919, -0.0616042, 0.919323)
 bones/11/rotation = Quaternion(-0.111098, -7.03744e-07, -4.64876e-07, 0.993809)
 bones/12/rotation = Quaternion(-0.0773526, 1.90509e-06, 2.03282e-06, 0.997004)
-bones/15/rotation = Quaternion(-0.267314, 0.00553347, -0.0279396, 0.963189)
+bones/15/rotation = Quaternion(-0.267314, 0.00553347, -0.0279396, 0.963188)
 bones/16/rotation = Quaternion(-0.118552, -9.78659e-07, -7.28016e-07, 0.992948)
 bones/17/rotation = Quaternion(-0.243626, -4.04668e-07, 1.39599e-06, 0.969869)
 bones/20/rotation = Quaternion(0.00697191, 0.0159542, 0.00357725, 0.999842)
@@ -661,103 +660,98 @@ bones/21/rotation = Quaternion(-0.349164, 0.0145319, 0.00812636, 0.936914)
 bones/22/rotation = Quaternion(-0.144579, 2.21087e-06, -7.69812e-06, 0.989493)
 bones/24/rotation = Quaternion(0.371034, 0.0854211, 0.254807, 0.888882)
 bones/25/rotation = Quaternion(-0.100808, 7.23431e-07, -8.71262e-07, 0.994906)
-bones/26/rotation = Quaternion(-0.135951, -3.47155e-07, 3.53478e-06, 0.990716)
 bones/28/rotation = Quaternion(-2.19291e-07, 0.331747, -1.38347e-07, 0.943368)
-bones/29/rotation = Quaternion(-1.77544e-07, 0.579511, -3.99902e-08, 0.814964)
-bones/30/rotation = Quaternion(3.96258e-07, 0.642779, -1.24884e-07, 0.766051)
-bones/31/rotation = Quaternion(-3.23859e-08, 0.806435, -5.40927e-08, 0.591323)
-bones/33/rotation = Quaternion(-0.180795, 0.697385, 6.28643e-09, 0.693519)
-bones/35/rotation = Quaternion(-0.333985, 0.480458, 0.78328, -0.209967)
-bones/36/rotation = Quaternion(0.739484, -1.55975e-06, 1.43159e-06, 0.673174)
-bones/37/rotation = Quaternion(0.0462913, 0.147348, 0.191755, 0.969214)
+bones/29/rotation = Quaternion(-1.77544e-07, 0.579511, -3.99902e-08, 0.814965)
+bones/30/rotation = Quaternion(3.96329e-07, 0.642345, -1.24659e-07, 0.766416)
+bones/31/rotation = Quaternion(-3.23391e-08, 0.805923, -5.41207e-08, 0.592021)
+bones/33/rotation = Quaternion(-0.176571, 0.694044, 1.19326e-09, 0.697944)
+bones/35/rotation = Quaternion(-0.336828, 0.482984, 0.775674, -0.227164)
+bones/36/rotation = Quaternion(0.736581, -1.54543e-06, 1.42964e-06, 0.67635)
+bones/37/rotation = Quaternion(0.0447039, 0.132627, 0.200925, 0.969557)
 bones/38/rotation = Quaternion(0.113829, -0.626522, -0.0624809, 0.768511)
-bones/39/rotation = Quaternion(-0.488347, -0.0597126, 0.0175807, 0.870427)
-bones/40/rotation = Quaternion(-0.526925, -3.75411e-07, -1.70843e-06, 0.849912)
-bones/41/rotation = Quaternion(-0.39932, 1.60676e-06, 2.18076e-06, 0.916812)
-bones/44/rotation = Quaternion(-0.51295, -0.0643853, 0.0196539, 0.855775)
-bones/45/rotation = Quaternion(-0.592187, 3.66418e-07, 8.05127e-07, 0.805801)
-bones/48/rotation = Quaternion(0.0250897, -0.703065, 0.0606681, 0.708089)
+bones/39/rotation = Quaternion(-0.487968, -0.0597049, 0.0176067, 0.870639)
+bones/40/rotation = Quaternion(-0.526681, -3.75902e-07, -1.70832e-06, 0.850063)
+bones/44/rotation = Quaternion(-0.512464, -0.0643741, 0.0196905, 0.856066)
+bones/45/rotation = Quaternion(-0.592187, 3.66418e-07, 8.05126e-07, 0.805801)
+bones/48/rotation = Quaternion(0.0250897, -0.703065, 0.060668, 0.708089)
 bones/49/rotation = Quaternion(-0.510657, -0.142163, 0.0578869, 0.845972)
 bones/50/rotation = Quaternion(-0.493083, 6.11147e-07, 1.01198e-06, 0.869982)
 bones/51/rotation = Quaternion(-0.3164, 4.98366e-07, -1.35071e-06, 0.948626)
 bones/54/rotation = Quaternion(-0.446014, -0.11441, -0.0529976, 0.8861)
-bones/58/rotation = Quaternion(0.367101, -0.16434, -0.199338, 0.893585)
-bones/59/rotation = Quaternion(-0.314695, 0.0178802, 0.110328, 0.94259)
-bones/60/rotation = Quaternion(-0.284886, 9.32845e-07, -3.51485e-06, 0.958561)
-bones/62/rotation = Quaternion(9.70015e-08, -0.170678, 1.83328e-07, 0.985327)
-bones/63/rotation = Quaternion(-1.19469e-07, -0.0626302, -7.22432e-09, 0.998037)
-bones/64/rotation = Quaternion(-2.06061e-07, -0.031567, 1.33037e-08, 0.999502)
-bones/65/rotation = Quaternion(4.50571e-08, 0.0616856, 3.37457e-08, 0.998096)
-bones/67/rotation = Quaternion(0.0405803, 0.292531, 6.1118e-10, 0.955395)
+bones/58/rotation = Quaternion(0.367041, -0.166228, -0.195875, 0.894026)
+bones/59/rotation = Quaternion(-0.314695, 0.0178802, 0.110328, 0.942589)
+bones/60/rotation = Quaternion(-0.305961, 1.01054e-06, -3.49418e-06, 0.952044)
+bones/62/rotation = Quaternion(9.67131e-08, -0.172227, 1.8348e-07, 0.985057)
+bones/63/rotation = Quaternion(-1.19413e-07, -0.0699284, -8.09796e-09, 0.997552)
+bones/64/rotation = Quaternion(-2.0617e-07, -0.0403456, 1.14931e-08, 0.999186)
+bones/65/rotation = Quaternion(4.46084e-08, 0.048524, 3.43367e-08, 0.998822)
+bones/67/rotation = Quaternion(0.0437061, 0.291244, -6.40285e-10, 0.95565)
 
 [node name="L_Wrist_GRP" parent="Controls_GRP/root_GRP/root_ctrl" index="0"]
-transform = Transform3D(-0.863379, 0.49992, -0.068245, -0.492144, -0.804585, 0.332322, 0.111226, 0.320507, 0.940693, 0, 0, 0)
+transform = Transform3D(-0.86318, 0.499927, -0.0706733, -0.49311, -0.80466, 0.330703, 0.108459, 0.320306, 0.941084, 0.492643, -0.601263, 0.123453)
 
 [node name="L_Wrist_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP" index="0"]
-transform = Transform3D(0.995308, -0.0622502, -0.074072, -0.0911257, -0.860432, -0.50135, -0.0325248, 0.505748, -0.862068, 0.251683, -0.561895, 0.357176)
+transform = Transform3D(0.995905, -0.0519022, -0.0740198, -0.082153, -0.861314, -0.501387, -0.0377312, 0.505415, -0.862051, 0.251649, -0.56205, 0.358731)
 
 [node name="L_Meta_Index_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Index_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.999711, -0.0240395, 0, 0.0240395, 0.999711, 0, 0, 0)
 
 [node name="L_Index_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Index_GRP/L_Meta_Index_CTRL/L_Index_01_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.757282, 0.653088, 0, -0.653088, 0.757282, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.758285, 0.651923, 0, -0.651923, 0.758285, 0, 0, 0)
 
 [node name="L_Index_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Index_GRP/L_Meta_Index_CTRL/L_Index_01_GRP/L_Index_01_CTRL/L_Index_02_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.841345, 0.5405, 0, -0.5405, 0.841345, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.841655, 0.540017, 0, -0.540017, 0.841655, 0, 0, 0)
 
 [node name="L_Index_03_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Index_GRP/L_Meta_Index_CTRL/L_Index_01_GRP/L_Index_01_CTRL/L_Index_02_GRP/L_Index_02_CTRL/L_Index_03_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.941127, 0.338054, 0, -0.338054, 0.941127, 0, 0, 0)
 
 [node name="L_Middle_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Middle_GRP/L_Meta_Middle_CTRL/L_Middle_01_GRP" index="0"]
-transform = Transform3D(0.997472, -0.0710629, -2.6077e-08, 0.0567273, 0.79625, 0.602302, -0.0428013, -0.600779, 0.798268, 0, 0, 0)
+transform = Transform3D(0.997472, -0.0710628, 8.06004e-05, 0.0567272, 0.796932, 0.601399, -0.0428013, -0.599874, 0.798949, 0, 0, 0)
 
 [node name="L_Middle_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Middle_GRP/L_Meta_Middle_CTRL/L_Middle_01_GRP/L_Middle_01_CTRL/L_Middle_02_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.764813, 0.644252, 0, -0.644252, 0.764813, 0, 0, 0)
 
 [node name="L_Meta_Ring_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Ring_GRP" index="0"]
-transform = Transform3D(0.999115, 0.0420561, -1.62981e-09, -0.0418698, 0.994689, -0.094028, -0.00395445, 0.0939449, 0.995569, 0, 0, 0)
+transform = Transform3D(0.999115, 0.0420561, -4.65661e-10, -0.0418697, 0.994689, -0.0940281, -0.00395445, 0.093945, 0.995569, 0, 0, 0)
 
 [node name="L_Ring_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Ring_GRP/L_Meta_Ring_CTRL/L_Ring_01_GRP" index="0"]
-transform = Transform3D(0.969196, -0.133181, -0.207178, 0.229696, 0.792334, 0.565196, 0.0888812, -0.595373, 0.798518, 0, 0, 0)
+transform = Transform3D(0.969196, -0.133181, -0.207178, 0.229696, 0.792334, 0.565196, 0.0888811, -0.595373, 0.798518, 0, 0, 0)
 
 [node name="L_Ring_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Ring_GRP/L_Meta_Ring_CTRL/L_Ring_01_GRP/L_Ring_01_CTRL/L_Ring_02_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.906481, 0.422246, 0, -0.422246, 0.906481, 0, 0, 0)
 
 [node name="L_Ring_03_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Ring_GRP/L_Meta_Ring_CTRL/L_Ring_01_GRP/L_Ring_01_CTRL/L_Ring_02_GRP/L_Ring_02_CTRL/L_Ring_03_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999671, 0.0256389, 0, -0.0256389, 0.999671, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999671, 0.025639, 0, -0.025639, 0.999671, 0, 0, 0)
 
 [node name="L_Pinkie_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Meta_Pinkie_GRP/L_Meta_Pinkie_CTRL/L_Pinkie_01_GRP" index="0"]
-transform = Transform3D(0.999968, 0.00799976, -2.32831e-10, -0.00670023, 0.837528, 0.546354, 0.0043707, -0.546337, 0.837554, 0, 0, 0)
+transform = Transform3D(0.999968, 0.00799975, 4.65661e-10, -0.00670023, 0.837528, 0.546353, 0.00437069, -0.546336, 0.837554, 0, 0, 0)
 
 [node name="L_Thumb_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Thumb_01_GRP" index="0"]
-transform = Transform3D(0.947182, -0.268298, -0.175677, 0.262255, 0.963302, -0.0572001, 0.184576, 0.00810683, 0.982785, 0, 0, 0)
+transform = Transform3D(0.944835, -0.276197, -0.176074, 0.269968, 0.961067, -0.0588885, 0.185484, 0.00810567, 0.982614, 0, 0, 0)
 
 [node name="L_Thumb_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Thumb_01_GRP/L_Thumb_01_CTRL/L_Thumb_02_GRP" index="0"]
-transform = Transform3D(0.975016, -0.219242, -0.0357304, 0.222134, 0.96232, 0.156832, -7.45058e-09, -0.16085, 0.986979, 0, 0, 0)
+transform = Transform3D(0.975016, -0.219242, -0.0357304, 0.222134, 0.96232, 0.156832, -3.72529e-09, -0.16085, 0.986979, 0, 0, 0)
 
 [node name="L_Thumb_03_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/L_Wrist_GRP/L_Wrist_CTRL/L_Thumb_01_GRP/L_Thumb_01_CTRL/L_Thumb_02_GRP/L_Thumb_02_CTRL/L_Thumb_03_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.991218, 0.132234, 0, -0.132234, 0.991218, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.984421, 0.175824, 0, -0.175824, 0.984421, 0, 0, 0)
 
 [node name="R_Wrist_GRP" parent="Controls_GRP/root_GRP/root_ctrl" index="2"]
-transform = Transform3D(-0.864556, -0.497937, 0.0678374, 0.490311, -0.806208, 0.331095, -0.110173, 0.319511, 0.941156, -0.491078, -0.598554, 0.121468)
+transform = Transform3D(-0.862379, -0.501964, 0.0658306, 0.493419, -0.804261, 0.331213, -0.113312, 0.318113, 0.941257, -0.491564, -0.600425, 0.120252)
 
 [node name="R_Wrist_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP" index="0"]
-transform = Transform3D(-0.157301, -0.646225, 0.746759, 0.793226, -0.533112, -0.294252, 0.588259, 0.546063, 0.596461, -0.0962882, -0.251238, 0.413521)
+transform = Transform3D(-0.157301, -0.646225, 0.746759, 0.793225, -0.533113, -0.294252, 0.58826, 0.546062, 0.596461, -0.0962882, -0.251238, 0.413521)
 
 [node name="R_Thumb_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Thumb_01_GRP" index="0"]
 transform = Transform3D(0.990566, 0.10717, 0.0854014, -0.107563, 0.994198, 0, -0.0849059, -0.00918603, 0.996347, 0, 0, 0)
 
 [node name="R_Thumb_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Thumb_01_GRP/R_Thumb_01_CTRL/R_Thumb_02_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.960795, -0.27726, 0, 0.27726, 0.960795, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.960795, -0.277261, 0, 0.277261, 0.960795, 0, 0, 0)
 
 [node name="R_Thumb_03_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Thumb_01_GRP/R_Thumb_01_CTRL/R_Thumb_02_GRP/R_Thumb_02_CTRL/R_Thumb_03_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.985175, -0.171552, 0, 0.171552, 0.985175, 0, 0, 0)
 
 [node name="R_Meta_Index_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Index_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.998097, 0.0616699, 0, -0.0616699, 0.998097, 0, 0, 0)
-
-[node name="R_Index_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Index_GRP/R_Meta_Index_CTRL/R_Index_01_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.955178, 0.296032, 0, -0.296032, 0.955178, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.998097, 0.0616698, 0, -0.0616698, 0.998097, 0, 0, 0)
 
 [node name="R_Index_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Index_GRP/R_Meta_Index_CTRL/R_Index_01_GRP/R_Index_01_CTRL/R_Index_02_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.922994, -0.384815, 0, 0.384815, 0.922994, 0, 0, 0)
@@ -766,7 +760,7 @@ transform = Transform3D(1, 0, 0, 0, 0.922994, -0.384815, 0, 0.384815, 0.922994, 
 transform = Transform3D(1, 0, 0, 0, 0.981305, -0.192457, 0, 0.192457, 0.981305, 0, 0, 0)
 
 [node name="R_Middle_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Middle_GRP/R_Meta_Middle_CTRL/R_Middle_01_GRP" index="0"]
-transform = Transform3D(0.991464, 0.130382, -1.41561e-07, -0.122354, 0.93042, 0.345468, 0.045043, -0.342519, 0.93843, 0, 0, 0)
+transform = Transform3D(0.991464, 0.130382, -1.86264e-09, -0.122354, 0.93042, 0.345469, 0.0450429, -0.34252, 0.93843, 0, 0, 0)
 
 [node name="R_Middle_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Middle_GRP/R_Meta_Middle_CTRL/R_Middle_01_GRP/R_Middle_01_CTRL/R_Middle_02_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.94113, -0.338046, 0, 0.338046, 0.94113, 0, 0, 0)
@@ -775,7 +769,7 @@ transform = Transform3D(1, 0, 0, 0, 0.94113, -0.338046, 0, 0.338046, 0.94113, 0,
 transform = Transform3D(1, 0, 0, 0, 0.954467, -0.298315, 0, 0.298315, 0.954467, 0, 0, 0)
 
 [node name="R_Ring_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Ring_GRP/R_Meta_Ring_CTRL/R_Ring_01_GRP" index="0"]
-transform = Transform3D(0.976701, 0.15644, -0.146906, -0.140149, 0.98338, 0.115422, 0.162521, -0.0921438, 0.982393, 0, 0, 0)
+transform = Transform3D(0.976701, 0.15644, -0.146907, -0.140149, 0.98338, 0.115422, 0.162521, -0.0921437, 0.982393, 0, 0, 0)
 
 [node name="R_Ring_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Ring_GRP/R_Meta_Ring_CTRL/R_Ring_01_GRP/R_Ring_01_CTRL/R_Ring_02_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.936713, -0.350098, 0, 0.350098, 0.936713, 0, 0, 0)
@@ -784,28 +778,25 @@ transform = Transform3D(1, 0, 0, 0, 0.936713, -0.350098, 0, 0.350098, 0.936713, 
 transform = Transform3D(1, 0, 0, 0, 0.99207, -0.125684, 0, 0.125684, 0.99207, 0, 0, 0)
 
 [node name="R_Pinkie_01_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Pinkie_GRP/R_Meta_Pinkie_CTRL/R_Pinkie_01_GRP" index="0"]
-transform = Transform3D(0.976892, -0.0230528, -0.212486, -0.0549517, 0.933656, -0.353931, 0.206548, 0.357428, 0.910815, 0, 0, 0)
+transform = Transform3D(0.976892, -0.0230527, -0.212486, -0.0549516, 0.933656, -0.35393, 0.206548, 0.357428, 0.910815, 0, 0, 0)
 
 [node name="R_Pinkie_02_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Pinkie_GRP/R_Meta_Pinkie_CTRL/R_Pinkie_01_GRP/R_Pinkie_01_CTRL/R_Pinkie_02_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999982, 0.00593161, 0, -0.00593161, 0.999982, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999982, 0.00593162, 0, -0.00593162, 0.999982, 0, 0, 0)
 
 [node name="R_Pinkie_03_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Wrist_GRP/R_Wrist_CTRL/R_Meta_Pinkie_GRP/R_Meta_Pinkie_CTRL/R_Pinkie_01_GRP/R_Pinkie_01_CTRL/R_Pinkie_02_GRP/R_Pinkie_02_CTRL/R_Pinkie_03_GRP" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.954693, -0.297593, 0, 0.297593, 0.954693, 0, 0, 0)
 
-[node name="R_Shoulder_CTRL" parent="Controls_GRP/root_GRP/root_ctrl/R_Shoulder_GRP" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0718954, -0.0380257, 0.195851)
-
 [node name="Skeleton3D" parent="Gumball_Machine_Rig_V1/Gumball_Machine_Joints" index="0"]
-bones/0/position = Vector3(-0.120167, -0.38146, 0.345776)
-bones/0/rotation = Quaternion(-0.113915, 0.834748, 0.106711, 0.528046)
+bones/0/position = Vector3(-0.120646, -0.384313, 0.345956)
+bones/0/rotation = Quaternion(-0.112685, 0.834072, 0.105385, 0.529641)
 bones/1/position = Vector3(-1.26835e-05, 0.134416, 0.122998)
-bones/1/rotation = Quaternion(-0.00119061, 0, 0, 0.999999)
+bones/1/rotation = Quaternion(-0.00102501, 0, 0, 1)
 
 [node name="Gumball_Machine_GEO" parent="Gumball_Machine_Rig_V1" index="1"]
-transform = Transform3D(-0.416381, -0.302877, 0.857259, -0.0774842, 0.951273, 0.298457, -0.905882, 0.0578481, -0.41956, -0.120147, -0.381504, 0.345784)
+transform = Transform3D(-0.413565, -0.299608, 0.859767, -0.0763425, 0.952393, 0.295163, -0.907268, 0.0564324, -0.416749, -0.120626, -0.384358, 0.345965)
 
 [node name="GEO_Lever_Base" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999997, 0.00238122, 0, -0.00238122, 0.999997, -3.55271e-17, -0.0651091, 0.116902)
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0.00205002, 0, -0.00205002, 0.999998, -3.55271e-17, -0.0651091, 0.116902)
 
 [node name="GEO_Hatch_Hinge" parent="Gumball_Machine_Rig_V1/Gumball_Machine_GEO/GEO_Base/GEO_Hatch_Base" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -826,10 +817,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="weapon" parent="weapon_ctrl_grp" index="0"]
-transform = Transform3D(-0.416216, -0.300709, 0.858102, -0.0778791, 0.952052, 0.295857, -0.905925, 0.0563122, -0.419678, -0.158851, -0.262018, 0.353156)
+transform = Transform3D(-0.413565, -0.299608, 0.859767, -0.0763427, 0.952392, 0.295163, -0.907269, 0.0564323, -0.416749, -0.158851, -0.262674, 0.353156)
 
 [node name="weapon_lever_move" parent="weapon_ctrl_grp/weapon/weapon_lever_grp" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999997, 0.00238117, 0, -0.00238117, 0.999997, 0, 0.134464, 0.142112)
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0.00204998, 0, -0.00204998, 0.999998, 0, 0.134464, 0.142112)
 
 [node name="weapon_gum_lid" parent="weapon_ctrl_grp/weapon/weapon_gum_bowl_grp/weapon_gum_bowl/weapon_gum_lid_grp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -845,15 +836,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="weapon_gumball_4" parent="weapon_ctrl_grp/weapon/weapon_gum_bowl_grp/weapon_gum_bowl/weapon_gumball_4_grp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="weapon_bar_bowl" parent="weapon_ctrl_grp/weapon/weapon_bar_bowl_grp" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.824159, 0.454268, -2.07284e-06)
-
-[node name="weapon_lollipop_bowl" parent="weapon_ctrl_grp/weapon/weapon_lollipop_bowl_grp" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13225, 0.454277, -7.58092e-07)
-
-[node name="weapon_flap_root" parent="weapon_ctrl_grp/weapon/weapon_flap_root_grp" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0691267, 0.273189, 0)
 
 [node name="AnimationPlayer" parent="." index="6"]
 libraries = {

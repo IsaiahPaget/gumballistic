@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func shoot():
-	animTree.set("parameters/OneShot/active", true)
+	animTree.set('parameters/OneShot/request', true)
