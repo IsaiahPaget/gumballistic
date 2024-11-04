@@ -284,7 +284,7 @@ func action_shoot():
 		if !blaster_cooldown.is_stopped(): return # Cooldown for shooting
 		
 		Audio.play(weapon.sound_shoot)
-		weapon.model.shoot()
+		#weapon.model.shoot()
 		container.position.z += 0.1 # Knockback of weapon visual
 		camera.rotation.x += 0.015 # Knockback of camera
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
