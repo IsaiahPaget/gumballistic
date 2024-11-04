@@ -170,6 +170,11 @@ func handle_controls(_delta):
 	# Weapon switching
 	
 	action_weapon_toggle()
+	
+	# Quit
+	
+	if Input.is_action_just_pressed("close_game"):
+		get_tree().quit()
 
 # Handle gravity
 
@@ -279,7 +284,7 @@ func action_shoot():
 		if !blaster_cooldown.is_stopped(): return # Cooldown for shooting
 		
 		Audio.play(weapon.sound_shoot)
-		
+		weapon.model.shoot()
 		container.position.z += 0.1 # Knockback of weapon visual
 		camera.rotation.x += 0.015 # Knockback of camera
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
