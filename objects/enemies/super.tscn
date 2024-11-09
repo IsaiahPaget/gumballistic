@@ -50,7 +50,7 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_jfsns")
 max_health = 25
-speed = 5
+speed = 4
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)

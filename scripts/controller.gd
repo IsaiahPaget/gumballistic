@@ -13,6 +13,7 @@ class_name Controller
 var _enemies := []
 var level = 1
 var _kills = 0
+var _total_kills := 0 
 @export var max_enemies = 5
 
 var _enemies_in_game := 0
@@ -64,13 +65,14 @@ func get_enemy() -> Enemy:
 
 func return_enemy(enemy: Enemy) -> void:
 	_kills += 1
+	_total_kills += 1
 	if enemy_attack.is_connected(enemy.attack):
 		enemy_attack.disconnect(enemy.attack)
 	if enemy_nav.is_connected(enemy.navigate):
 		enemy_nav.disconnect(enemy.navigate)
 	enemy.hide()
 	_enemies.push_front(enemy)
-	enemy_killed.emit(_kills)
+	enemy_killed.emit(_total_kills)
 
 func trick_or_treat_select(selection: String) -> void:
 	match selection.to_lower():
