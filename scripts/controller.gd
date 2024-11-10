@@ -103,5 +103,3 @@ func _on_nav_timer_timeout() -> void:
 
 func _on_attack_timer_timeout() -> void:
 	enemy_attack.emit()
-
-

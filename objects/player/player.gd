@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name Player
 @export_subgroup("Properties")
-@export var movement_speed := 5 as float
+@export var movement_speed := 3 as float
 @export var jump_strength := 8
 
 @export_subgroup("Weapons")
@@ -21,11 +21,14 @@ var rotation_target: Vector3
 var input_mouse: Vector2
 var _taking_damage := false
 
+#Cheats
+var _god_mode := false
+
 @export var max_health:int = 100
 @export var health_upgrade_rate := 10
 @export var speed_upgrade_rate := 1
 @export var damage_upgrade_rate := 10
-@export var firerate_upgrade_rate := 0.1
+@export var firerate_upgrade_rate := 0.05
 @export var poise_upgrade_rate := 1
 @export var accuracy_upgrade_rate := 0.1
 
@@ -174,6 +177,19 @@ func handle_controls(_delta):
 	
 	if Input.is_action_just_pressed("close_game"):
 		get_tree().quit()
+	
+	#Dev Reload Game
+	
+	if Input.is_action_just_pressed("reload_game"):
+		get_tree().reload_current_scene()
+	
+	#Cheats
+	
+	#God Mode
+	if Input.is_action_just_pressed("god_mode") and _god_mode == false:
+		_god_mode = true
+	elif Input.is_action_just_pressed("god_mode") and _god_mode == true:
+		_god_mode = false
 
 # Handle gravity
 
@@ -194,6 +210,7 @@ func upgrade_health() -> void:
 
 func upgrade_speed() -> void:
 	movement_speed += speed_upgrade_rate
+	_weapon_model.anim_idle_speed(movement_speed * 0.4)
 	if movement_speed >= 15:
 		movement_speed = 15
 
@@ -206,8 +223,8 @@ func upgrade_damage() -> void:
 func upgrade_firerate() -> void:
 	for weapon_it in weapons:
 		weapon_it.cooldown -= firerate_upgrade_rate
-		if weapon_it.cooldown <= 0.1:
-			weapon_it.cooldown = 0.1
+		if weapon_it.cooldown <= 0.05:
+			weapon_it.cooldown = 0.05
 func upgrade_accuracy() -> void:
 	for weapon_it in weapons:
 		weapon_it.spread -= accuracy_upgrade_rate
@@ -385,16 +402,17 @@ func change_weapon():
 	crosshair.texture = weapon.crosshair
 
 func damage(amount):
-	if _taking_damage:
-		return
+	if _god_mode == false:
+		if _taking_damage:
+			return
 
-	_taking_damage = true
-	health -= amount
+		_taking_damage = true
+		health -= amount
 	
-	if health < 0:
-		Audio.play("sounds/player/playerdeath1.ogg, sounds/player/playerdeath2.ogg")
-		get_tree().reload_current_scene() # Reset when out of health
-		return
-	Audio.play("sounds/player/playerhurt1.ogg, sounds/player/playerhurt2.ogg, sounds/player/playerhurt3.ogg,  sounds/player/playerhurt4.ogg")
-	_taking_damage = false
-	health_updated.emit(health) # Update health on HUD
+		if health < 0:
+			Audio.play("sounds/player/playerdeath1.ogg, sounds/player/playerdeath2.ogg")
+			get_tree().reload_current_scene() # Reset when out of health
+			return
+		Audio.play("sounds/player/playerhurt1.ogg, sounds/player/playerhurt2.ogg, sounds/player/playerhurt3.ogg,  sounds/player/playerhurt4.ogg")
+		_taking_damage = false
+		health_updated.emit(health) # Update health on HUD

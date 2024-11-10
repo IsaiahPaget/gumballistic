@@ -9,7 +9,7 @@ class_name Enemy
 @onready var animation := $AnimatedSprite3D
 @onready var controller = get_tree().get_first_node_in_group("Controller") as Controller
 
-@export_range(10, 100) var max_health := 100
+@export_range(10, 1000) var max_health := 100
 @onready var health := max_health
 @export var speed := 3
 
