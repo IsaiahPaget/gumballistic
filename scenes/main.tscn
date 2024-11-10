@@ -33,7 +33,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Arr
 environment = ExtResource("1_q8fpv")
 
 [node name="Player" parent="." node_paths=PackedStringArray("crosshair") groups=["Player"] instance=ExtResource("2_elriq")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.932929, 1.17868)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 crosshair = NodePath("../HUD/Crosshair")
 
 [node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("health_bar", "firerate_label", "poise_label", "damage_label", "accuracy_label", "speed_label", "shotcount_label", "kills_label")]
@@ -167,6 +167,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 [node name="map_ceiling" parent="NavigationRegion3D/Level" instance=ExtResource("10_pbef5")]
 transform = Transform3D(-2.72011, 8.74228e-08, 0, -2.37799e-07, -1, 0, 0, 0, 2.76956, 0, 4.73, 0)
 
+[node name="map_floor3" parent="NavigationRegion3D/Level" instance=ExtResource("7_jmpvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.8915)
+
 [node name="Decoration" type="Node" parent="NavigationRegion3D"]
 
 [node name="map_kitchen_assets" parent="NavigationRegion3D/Decoration" instance=ExtResource("10_rw308")]
@@ -217,6 +220,19 @@ autostart = true
 [node name="NavTimer" type="Timer" parent="Controller"]
 wait_time = 0.25
 autostart = true
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="KitchenOmni" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91805, -6.70188)
+light_color = Color(1, 0.973167, 0.77, 1)
+light_energy = 2.752
+shadow_enabled = true
+shadow_blur = 6.547
+omni_range = 6.773
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-0.688177, 0, -0.725543, 0, 1, 0, 0.725543, 0, -0.688177, 0, 0, 5.43179)
 
 [connection signal="accuracy_updated" from="Player" to="HUD" method="_on_player_accuracy_updated"]
 [connection signal="damage_updated" from="Player" to="HUD" method="_on_player_damage_updated"]
