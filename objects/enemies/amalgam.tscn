@@ -1,0 +1,2028 @@
+[gd_scene load_steps=41 format=3 uid="uid://cld4toe8jju7t"]
+
+[ext_resource type="Script" path="res://objects/enemies/enemy.gd" id="1_l0hk0"]
+[ext_resource type="Texture2D" uid="uid://bgpoysmrtnwim" path="res://sprites/sturdy/Sturdy Antic.png" id="2_kldrb"]
+[ext_resource type="Texture2D" uid="uid://dsch0sufdx7ma" path="res://sprites/sturdy/Sturdy Attack.png" id="3_5sb0n"]
+[ext_resource type="Texture2D" uid="uid://bturcuvda603j" path="res://sprites/sturdy/Sturdy Hurt.png" id="4_rmdqf"]
+[ext_resource type="Texture2D" uid="uid://c3n2rcmtc0oo7" path="res://sprites/sturdy/Sturdy Walk 1.png" id="5_yk6pl"]
+[ext_resource type="Texture2D" uid="uid://bwg17ibvu3cvt" path="res://sprites/sturdy/Sturdy Walk 2.png" id="6_qyarb"]
+[ext_resource type="Texture2D" uid="uid://cclqivh715mk3" path="res://sprites/super/Super Antic.png" id="7_pmmoq"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="7_wljkm"]
+[ext_resource type="Texture2D" uid="uid://cqx600kf5om0n" path="res://sprites/super/Super Attack.png" id="8_s6hip"]
+[ext_resource type="Texture2D" uid="uid://bs8hcrhpernxk" path="res://sprites/super/Super Hurt.png" id="9_iwmsn"]
+[ext_resource type="Texture2D" uid="uid://vbfxtm351sfx" path="res://sprites/super/Super Run 1.png" id="10_ou0kx"]
+[ext_resource type="Texture2D" uid="uid://bbvve8wjjtssv" path="res://sprites/super/Super Run 2.png" id="11_woxub"]
+[ext_resource type="Texture2D" uid="uid://c3ilc0jmmrnw7" path="res://sprites/spooks/Spook Antic.png" id="12_8s7xv"]
+[ext_resource type="Texture2D" uid="uid://b4yt5v2vogo1n" path="res://sprites/spooks/Spook Attack.png" id="13_sewci"]
+[ext_resource type="Texture2D" uid="uid://cq4ipie2bhwr0" path="res://sprites/spooks/Spook Hurt.png" id="14_mxyhq"]
+[ext_resource type="Texture2D" uid="uid://dxahqo3bi84ao" path="res://sprites/spooks/Spook Walk 1.png" id="15_tu6g5"]
+[ext_resource type="Texture2D" uid="uid://v5uoiydmioh" path="res://sprites/spooks/Spook Walk 2.png" id="16_h4oun"]
+[ext_resource type="Texture2D" uid="uid://q4s1okgtjkeu" path="res://sprites/spooks/Spook Walk 3.png" id="17_om2ui"]
+[ext_resource type="Texture2D" uid="uid://doudkw54623bi" path="res://sprites/sprite/Sprite Antic.png" id="18_fct6v"]
+[ext_resource type="Texture2D" uid="uid://ctn3bw5ashdxy" path="res://sprites/sprite/Sprite Attack.png" id="19_820yi"]
+[ext_resource type="Texture2D" uid="uid://ei3dwwglm4g0" path="res://sprites/sprite/Sprite Hurt.png" id="20_iq7py"]
+[ext_resource type="Texture2D" uid="uid://ckljv04oxtflm" path="res://sprites/sprite/Sprite Fly 1.png" id="21_eebrk"]
+[ext_resource type="Texture2D" uid="uid://cguki87ja5hhh" path="res://sprites/sprite/Sprite Fly 2.png" id="22_3fa1b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8fl5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kldrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5sb0n")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rmdqf")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yk6pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qyarb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tu51j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_pmmoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s6hip")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_iwmsn")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ou0kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_woxub")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2gxx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8s7xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sewci")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_mxyhq")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tu6g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h4oun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_om2ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h4oun")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0q3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fct6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_820yi")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_iq7py")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_eebrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3fa1b")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brm1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kldrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5sb0n")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rmdqf")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yk6pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qyarb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nf7of"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8s7xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sewci")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_mxyhq")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tu6g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h4oun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_om2ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h4oun")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_btq8w"]
+radius = 1.28412
+height = 3.91038
+
+[sub_resource type="Animation" id="Animation_jaj4c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super5:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super6:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite2:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite4:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite3:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy2:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy3:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy4:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy6:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy5:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:frame")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:frame")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super7:frame")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super8:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super9:frame")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimatedSprite3D:animation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook2:frame")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:animation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:animation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook5:frame")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook6:frame")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:animation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+
+[sub_resource type="Animation" id="Animation_pka1c"]
+resource_name = "attack"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super2:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super3:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super3:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super5:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super5:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super6:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super6:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super4:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super4:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite2:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite2:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.233333, 0.733333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite4:animation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite4:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite3:animation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite3:frame")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy2:animation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy2:frame")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy3:animation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy3:frame")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.233333, 0.733333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy4:animation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy4:frame")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy6:animation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy6:frame")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy5:animation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy5:frame")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook2:animation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook2:frame")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:animation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:frame")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:animation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:frame")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook5:animation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook5:frame")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook6:animation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook6:frame")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:animation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = false
+tracks/39/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:frame")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super7:animation")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super7:frame")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super8:animation")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super8:frame")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super9:animation")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super9:frame")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_sk4q4"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super2:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super3:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super3:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super5:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super5:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super6:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super6:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super4:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super4:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite2:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite2:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.233333, 0.733333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite4:animation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite4:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite3:animation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_ Sprite3:frame")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy2:animation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy2:frame")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy3:animation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy3:frame")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.233333, 0.733333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy4:animation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy4:frame")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy6:animation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy6:frame")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy5:animation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Sturdy5:frame")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook2:animation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook2:frame")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:animation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook7:frame")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:animation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook3:frame")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook5:animation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook5:frame")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook6:animation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook6:frame")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:animation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("AnimatedSprite3D/AnimatedSprite3D - Spook4:frame")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0.266667, 0.766667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super7:animation")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super7:frame")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super8:animation")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super8:frame")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super9:animation")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("AnimatedSprite3D/AnimatedSprite3D_Super9:frame")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0v5fn"]
+_data = {
+"RESET": SubResource("Animation_jaj4c"),
+"attack": SubResource("Animation_pka1c"),
+"walk": SubResource("Animation_sk4q4")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5ttk0"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o4bpr"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nsj70"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yflt0"]
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_70eys"]
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s2hee"]
+states/Start/position = Vector2(179, 108)
+states/attack/node = SubResource("AnimationNodeAnimation_5ttk0")
+states/attack/position = Vector2(346, -38)
+states/walk/node = SubResource("AnimationNodeAnimation_o4bpr")
+states/walk/position = Vector2(459, 108)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_nsj70"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_yflt0"), "attack", "walk", SubResource("AnimationNodeStateMachineTransition_70eys")]
+graph_offset = Vector2(-223, -74)
+
+[node name="enemy2" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.591225, 0)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_l0hk0")
+max_health = 1000
+speed = 2
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.324496, 0, 0, 0, 0.324496, 0, 0, 0, 0.324496, 0, 1.04084, 0)
+shaded = true
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_8fl5f")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D_Super" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0.146882, -3.86511, -8.09179)
+billboard = 1
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Super2" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.38168, -0.337229, 0, 0.351391, -0.366297, 0, 0, 0, 0.26, 2.06149, 0.696428, -1.51917)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super3" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.402283, -0.3144, 0, 0.327603, -0.386069, 0, 0, 0, 0.26, -1.87868, -1.75591, -1.51917)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super5" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.291123, -0.412114, 0, 0.429421, 0.27939, 0, 0, 0, 0.26, 2.91623, -1.71022, -1.51917)
+flip_h = true
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super6" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.238383, -0.44222, 0, 0.460792, -0.228775, 0, 0, 0, 0.26, 2.58676, -1.07047, -1.51917)
+flip_h = true
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super7" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.38168, -0.337229, 0, 0.351391, -0.366297, 0, 0, 0, 0.26, -2.43149, 0.696428, -1.51917)
+flip_v = true
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super8" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.291123, -0.412114, 0, 0.429421, 0.27939, 0, 0, 0, 0.26, -1.57675, -1.71022, -1.51917)
+flip_v = true
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super9" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.238383, -0.44222, 0, 0.460792, -0.228775, 0, 0, 0, 0.26, -1.90622, -1.07047, -1.51917)
+flip_v = true
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Super4" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.160513, 0.600141, 0.0406759, -0.404157, -0.249576, 0.0396151, 0.0839183, -0.0540756, 0.268592, -0.88775, -1.22502, -1.60744)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_tu51j")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_Spook_Mid" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.367696, 0, -0.367696, 0, 0.52, 0, 0.367696, 0, 0.367696, -1.57052, -1.82265, 1.41801)
+visible = false
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Mid" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Mid"]
+transform = Transform3D(0.928349, 0, 0, 0, 0.928347, 0, 0, 0, 0.928349, 0.140312, 0.0305939, -8.64992)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Mid2" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Mid"]
+transform = Transform3D(-5.96046e-08, 0, 0.928349, 0, 0.928347, 0, -0.928349, 0, -5.96046e-08, -4.08908, 0.0305939, -3.63255)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Mid3" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Mid"]
+transform = Transform3D(-5.96046e-08, 0, 0.928349, 0, 0.928347, 0, -0.928349, 0, -5.96046e-08, 4.5733, 0.0305939, -3.63255)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.335, 0, 0, 0, 0.335, 0, 0, 0, 0.335, 0, -3.376, 3)
+visible = false
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base2" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -9)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base3" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, -9)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base4" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -6.21212, 0, -15.2121)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base5" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 6.16323, 0, -2.83677)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base6" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 6.2, 0, -15.2)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_Spook_Base7" type="AnimatedSprite3D" parent="AnimatedSprite3D/AnimatedSprite3D_Spook_Base"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -6.1, 0, -2.8)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_i2gxx")
+animation = &"attack"
+
+[node name="AnimatedSprite3D_ Sprite" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.303082, 0, 0, 0, 0.303082, 0, 0, 0, 0.303082, -0.0356501, 0, -9.14194)
+visible = false
+shaded = true
+sprite_frames = SubResource("SpriteFrames_t0q3b")
+animation = &"walk"
+
+[node name="AnimatedSprite3D_ Sprite2" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.581215, 0.241867, 0, -0.319988, 0.439319, 0, 0, 0, 0.303082, 0.849491, -1.45125, 0.706038)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_t0q3b")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_ Sprite4" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.558031, 0.135366, -0.00723883, -0.210081, -0.33586, 0.0922188, 0.0488887, 0.101873, 0.31365, -0.528959, -1.65515, 0.724401)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_t0q3b")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D_ Sprite3" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.659953, 0.0516287, 0, -0.0683043, 0.498834, 0, 0, 0, 0.303082, -0.45238, 1.49113, 0.706038)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_t0q3b")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D - Sturdy" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.452734, 0, 0, 0, 0.452734, 0, 0, 0, 0.452734, 0.0756263, -1.75858, -4.52446)
+visible = false
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"attack"
+
+[node name="AnimatedSprite3D - Sturdy2" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.447895, -0.0660195, 0, 0.0660195, -0.447895, 0, 0, 0, 0.452734, -0.133723, 2.44099, -0.770183)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D - Sturdy3" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.442247, 0.0967027, -0.00585342, -0.0967305, 0.442277, -0.00160975, 0.00537438, 0.00282309, 0.452694, -0.671508, -2.7985, 0.605627)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D - Sturdy4" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.447587, -0.0678979, -0.00489033, 0.0678613, 0.447605, -0.00359701, 0.00537438, 0.00282309, 0.452694, 1.43658, -3.03644, 0.605627)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D - Sturdy6" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.212843, 0.399583, 3.499e-05, -0.399547, -0.212824, 0.00607063, 0.00537438, 0.00282309, 0.452694, -1.74615, -2.72706, 0.614032)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"walk"
+frame = 1
+
+[node name="AnimatedSprite3D - Sturdy5" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.438561, 0.11224, -0.00590655, -0.112267, 0.438592, -0.00140232, 0.00537438, 0.00282309, 0.452694, -0.947805, -3.16622, 0.605627)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_brm1i")
+animation = &"walk"
+
+[node name="AnimatedSprite3D - Spook" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.572559, 0, 0, 0, 0.572559, 0, 0, 0, 0.572559, 0.154262, -1.80383, -6.22707)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+
+[node name="AnimatedSprite3D - Spook2" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.525619, -0.16454, 0, 0.227042, -0.380923, 0, 0, 0, 0.572559, -1.06239, -4.17583, 1.13899)
+shaded = true
+render_priority = 4
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D - Spook7" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.34875, -0.329085, 0, 0.454089, 0.252744, 0, 0, 0, 0.572559, 0.456782, -2.71986, 0.680061)
+shaded = true
+render_priority = 4
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D - Spook3" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(-0.366314, 0.236869, 0, -0.209374, -0.414418, 0, 0, 0, 0.572559, 1.94575, -3.41874, 1.27948)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D - Spook5" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.38201, -0.202667, 0, 0.179142, 0.432176, 0, 0, 0, 0.572559, -1.3617, 0.26035, -0.0395499)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D - Spook6" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.48383, 0.336407, 0.0187658, -0.250799, 0.649825, 0.0214928, -0.0062036, -0.0341023, 0.594667, 1.31973, 0.718941, -0.0395499)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="AnimatedSprite3D - Spook4" type="AnimatedSprite3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.15114, 0.727868, 0, -0.32596, 0.337494, 0, 0, 0, 0.572559, 0.126248, -2.13504, 1.27948)
+shaded = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_nf7of")
+animation = &"attack"
+frame = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.778187, 0, 0, 0, 0.778187, 0, 0, 0, 0.778187, 0.0646549, 0.907345, 0.295596)
+shape = SubResource("CapsuleShape3D_btq8w")
+
+[node name="RayCast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 3.175)
+
+[node name="MuzzleA" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.45, 0.3, 0.4)
+visible = false
+sprite_frames = ExtResource("7_wljkm")
+frame = 2
+frame_progress = 1.0
+
+[node name="MuzzleB" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.45, 0.3, 0.4)
+visible = false
+sprite_frames = ExtResource("7_wljkm")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = -0.5
+avoidance_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0v5fn")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_s2hee")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/attack = false
+parameters/conditions/walk = false
